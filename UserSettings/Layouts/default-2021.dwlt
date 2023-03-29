@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 44
+  controlID: 107
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 455
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 50
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 51
+  controlID: 45
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,28 +326,28 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/YawVR/Sample/ControlSamples
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Macie\Gliwice\PP\PlaneSimulator-yawVR
+  m_LastProjectPath: C:\Users\Macie\Gliwice\gk\PlaneSimulator-yawVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 70670000
-    m_LastClickedID: 26480
-    m_ExpandedIDs: 0000000080610000b86100002262000000ca9a3bffffff7f
+    m_SelectedIDs: 22660000
+    m_LastClickedID: 26146
+    m_ExpandedIDs: 00000000fa650000fc650000fe65000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Sample
-      m_OriginalName: Sample
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25122
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080610000
+    m_ExpandedIDs: 00000000fa650000fc650000fe650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 280
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 36140000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3ec8ffff2efbffff
+      m_ExpandedIDs: 2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -776,9 +776,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.2571077, y: -0.9838257, z: 15.150188}
+    m_Target: {x: 4.5636415, y: -0.8091326, z: 15.034122}
     speed: 2
-    m_Value: {x: 5.2571077, y: -0.9838257, z: 15.150188}
+    m_Value: {x: 4.5636415, y: -0.8091326, z: 15.034122}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -825,9 +825,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20838441, y: 0.12925489, z: -0.027794514, w: -0.96907157}
+    m_Target: {x: -0.20513259, y: 0.14096442, z: -0.029870305, w: -0.96807057}
     speed: 2
-    m_Value: {x: -0.20838408, y: 0.1292547, z: -0.027794471, w: -0.9690701}
+    m_Value: {x: -0.20513259, y: 0.14096442, z: -0.029870305, w: -0.96807057}
   m_Size:
     m_Target: 15.94784
     speed: 2

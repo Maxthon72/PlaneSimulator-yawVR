@@ -333,14 +333,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Macie\Gliwice\gk\PlaneSimulator-yawVR
+  m_LastProjectPath: C:\Users\Maciek\Documents\GitHub\PlaneSimulator-yawVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 10.745645}
-    m_SelectedIDs: 3c6a0000
-    m_LastClickedID: 27196
-    m_ExpandedIDs: 00000000366a0000386a00003a6a00003c6a00003e6a000000ca9a3bffffff7f
+    m_SelectedIDs: 626d0000
+    m_LastClickedID: 28002
+    m_ExpandedIDs: 000000008025000098250000a4250000626d0000646d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -368,7 +368,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000366a0000386a00003a6a00003c6a00003e6a0000
+    m_ExpandedIDs: 000000008025000098250000a4250000626d0000646d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f4620000
-      m_LastClickedID: 25332
-      m_ExpandedIDs: 28fbffff
+      m_SelectedIDs: 72660000
+      m_LastClickedID: 26226
+      m_ExpandedIDs: 7af5ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -867,9 +867,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 291.87134, y: 47.01323, z: 523.9916}
+    m_Target: {x: 362.4845, y: 86.58307, z: 388.62823}
     speed: 2
-    m_Value: {x: 291.87134, y: 47.01323, z: 523.9916}
+    m_Value: {x: 362.4845, y: 86.58307, z: 388.62823}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -915,13 +915,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20615211, y: 0.6427076, z: -0.18525803, w: -0.7143758}
+    m_Target: {x: -0.01107355, y: 0.98873264, z: -0.08951288, w: -0.12041115}
     speed: 2
-    m_Value: {x: -0.20612891, y: 0.6426353, z: -0.18523718, w: -0.7142954}
+    m_Value: {x: -0.01120654, y: 0.9884392, z: -0.089486055, w: -0.12188034}
   m_Size:
-    m_Target: 75.91132
+    m_Target: 70.65157
     speed: 2
-    m_Value: 72.64242
+    m_Value: 73.980705
   m_Ortho:
     m_Target: 0
     speed: 2

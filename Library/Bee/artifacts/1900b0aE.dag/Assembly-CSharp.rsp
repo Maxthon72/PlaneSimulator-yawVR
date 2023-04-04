@@ -390,6 +390,7 @@
 "Assets/Environment/Water/Water/Scripts/WaterBase.cs"
 "Assets/Environment/Water/Water/Scripts/WaterTile.cs"
 "Assets/Menu.cs"
+"Assets/PauseMenu.cs"
 "Assets/SimpleAirplaneController/Scripts/AirplaneAerodynamics.cs"
 "Assets/SimpleAirplaneController/Scripts/AirplaneCameraController.cs"
 "Assets/SimpleAirplaneController/Scripts/AirplaneCameraManager.cs"

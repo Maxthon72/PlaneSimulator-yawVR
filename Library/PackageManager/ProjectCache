@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638159611482444616
+      ticks: 638162145572992586
     m_Hash: 741276125
   m_LockFileStatus:
     m_FilePath: C:/Users/Maciek/Documents/GitHub/PlaneSimulator-yawVR/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638159611482454593
+      ticks: 638162145572992586
     m_Hash: 183774475
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

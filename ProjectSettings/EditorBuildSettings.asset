@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: f83b7efab35ed5e41a5623f01a808339
+  - enabled: 1
+    path: Assets/SimpleAirplaneController/ExampleScene.unity
+    guid: 14866ae5492e87a4bb7e6e126b1ed1c5
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

@@ -11,13 +11,13 @@ D:\Program Files\Unity\2022.2.12f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/Wlasne/GitHub/PlaneSimulator-yawVRTest
+D:/Wlasne/GitHub/PlaneSimulator-yawVR
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56486
-Successfully changed project path to: D:/Wlasne/GitHub/PlaneSimulator-yawVRTest
-D:/Wlasne/GitHub/PlaneSimulator-yawVRTest
+56867
+Successfully changed project path to: D:/Wlasne/GitHub/PlaneSimulator-yawVR
+D:/Wlasne/GitHub/PlaneSimulator-yawVR
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +47,15 @@ D:/Wlasne/GitHub/PlaneSimulator-yawVRTest
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8472] Host "[IP] 192.168.100.121 [Port] 0 [Flags] 2 [Guid] 2508495679 [EditorId] 2508495679 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-0FHI7RE9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2228] Host "[IP] 192.168.100.121 [Port] 0 [Flags] 2 [Guid] 1171073961 [EditorId] 1171073961 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-0FHI7RE9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8472] Host "[IP] 192.168.100.121 [Port] 0 [Flags] 2 [Guid] 2508495679 [EditorId] 2508495679 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-0FHI7RE9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2228] Host "[IP] 192.168.100.121 [Port] 0 [Flags] 2 [Guid] 1171073961 [EditorId] 1171073961 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-0FHI7RE9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 18.71 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.69 ms.
+Refreshing native plugins compatible for Editor in 20.81 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 1.02 ms.
 Initialize engine version: 2022.2.12f1 (022dac4955a3)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity/2022.2.12f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Wlasne/GitHub/PlaneSimulator-yawVRTest/Assets
+[Subsystems] Discovering subsystems at path D:/Wlasne/GitHub/PlaneSimulator-yawVR/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -67,41 +67,41 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity/2022.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity/2022.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Program Files/Unity/2022.2.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity/2022.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002958 seconds.
-- Loaded All Assemblies, in  0.326 seconds
+Registered in 0.006126 seconds.
+- Loaded All Assemblies, in  0.488 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.322 seconds
+- Finished resetting the current domain, in  0.390 seconds
 Domain Reload Profiling:
-	ReloadAssembly (171ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (288ms)
+		BeginReloadAssembly (146ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (78ms)
+			LoadAssemblies (144ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (151ms)
-				TypeCache.Initialize (150ms)
-					TypeCache.ScanAssembly (147ms)
+			SetupTypeCache (194ms)
+				TypeCache.Initialize (193ms)
+					TypeCache.ScanAssembly (190ms)
 				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (253ms)
+			SetupLoadedEditorAssemblies (308ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (8ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (11ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (174ms)
-				ProcessInitializeOnLoadMethodAttributes (62ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,10 +109,10 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVRTest\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVRTest\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.923 seconds
-Refreshing native plugins compatible for Editor in 11.38 ms, found 12 plugins.
+Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVR\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVR\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.082 seconds
+Refreshing native plugins compatible for Editor in 13.36 ms, found 12 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -140,44 +140,44 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.710 seconds
+- Finished resetting the current domain, in  0.885 seconds
 Domain Reload Profiling:
-	ReloadAssembly (293ms)
-		BeginReloadAssembly (184ms)
+	ReloadAssembly (291ms)
+		BeginReloadAssembly (178ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		LoadAllAssembliesAndSetupDomain (630ms)
-			LoadAssemblies (303ms)
+			CreateAndSetChildDomain (32ms)
+		LoadAllAssembliesAndSetupDomain (790ms)
+			LoadAssemblies (376ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (407ms)
-				TypeCache.Initialize (379ms)
-					TypeCache.ScanAssembly (369ms)
-				ResolveRequiredComponents (6ms)
+			SetupTypeCache (502ms)
+				TypeCache.Initialize (460ms)
+					TypeCache.ScanAssembly (451ms)
+				ResolveRequiredComponents (7ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (516ms)
+			SetupLoadedEditorAssemblies (655ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (3ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (5ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (406ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (493ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 10.97 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+			AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.17 seconds
+Refreshing native plugins compatible for Editor in 14.85 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Unloading 4025 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 66 unused Assets / (81.2 KB). Loaded Objects now: 4493.
-Memory consumption went from 154.0 MB to 153.9 MB.
-Total: 4.550900 ms (FindLiveObjects: 0.314800 ms CreateObjectMapping: 0.137700 ms MarkObjects: 3.880000 ms  DeleteObjects: 0.216800 ms)
+Unloading 66 unused Assets / (81.7 KB). Loaded Objects now: 4493.
+Memory consumption went from 153.9 MB to 153.9 MB.
+Total: 7.038200 ms (FindLiveObjects: 0.489700 ms CreateObjectMapping: 0.441200 ms MarkObjects: 5.793300 ms  DeleteObjects: 0.312100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -192,115 +192,18 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVRTest\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Wlasne\GitHub\PlaneSimulator-yawVRTest\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.801 seconds
-Refreshing native plugins compatible for Editor in 10.36 ms, found 12 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@3.2.3\Runtime\OculusLoader.cs:296 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@3.2.3\Runtime\OculusLoader.cs:281 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <27586baf39bf4babbfd8a2caabe8e228>:0 
-   --- End of inner exception stack trace ---
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <27586baf39bf4babbfd8a2caabe8e228>:0 
-  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <27586baf39bf4babbfd8a2caabe8e228>:0 
-  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <ae93fefe62eb49e6b9ef3807ffd33dc7>:0 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-Mono: successfully reloaded assembly
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.985 seconds
-Domain Reload Profiling:
-	ReloadAssembly (271ms)
-		BeginReloadAssembly (181ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (61ms)
-		LoadAllAssembliesAndSetupDomain (529ms)
-			LoadAssemblies (264ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (342ms)
-				TypeCache.Initialize (336ms)
-					TypeCache.ScanAssembly (327ms)
-				ResolveRequiredComponents (6ms)
-		FinalizeReload (0ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (474ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (7ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (350ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Refreshing native plugins compatible for Editor in 10.86 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 3974 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 48 unused Assets / (51.9 KB). Loaded Objects now: 4497.
-Memory consumption went from 145.9 MB to 145.8 MB.
-Total: 4.435100 ms (FindLiveObjects: 0.359900 ms CreateObjectMapping: 0.137100 ms MarkObjects: 3.800200 ms  DeleteObjects: 0.136300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 529396.697861 seconds.
+  path: Assets/Balloon/BalloonStatic.blend
+  artifactKey: Guid(4d2b2f19f34d6b5488d20882434e675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Balloon/BalloonStatic.blend using Guid(4d2b2f19f34d6b5488d20882434e675b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da3b455ad70fb2442b181b6f7cd1e799') in 0.465861 seconds 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 105
 ========================================================================
 Received Import Request.
-  Time since last request: 527460.369233 seconds.
-  path: Assets/arcadeMode_img.png
-  artifactKey: Guid(d7f518d0744919141b11a48363e00cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/arcadeMode_img.png using Guid(d7f518d0744919141b11a48363e00cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b442c02dbaa7f7d1f18c968f7f6ee1a') in 0.105930 seconds 
+  Time since last request: 10.420319 seconds.
+  path: Assets/Balloon/Balloon.fbx
+  artifactKey: Guid(53f0c72549147b84dbd90bd7a0c382fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Balloon/Balloon.fbx using Guid(53f0c72549147b84dbd90bd7a0c382fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c1d03ca8d39c6be285014e97990e12') in 0.635665 seconds 
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/freePlayMode_img.png
-  artifactKey: Guid(2254a8ad2b14107469f90109ebd4b78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/freePlayMode_img.png using Guid(2254a8ad2b14107469f90109ebd4b78c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de36a61acf04e370a4790364ef35a8be') in 0.018388 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/test_background.png
-  artifactKey: Guid(bdf11ec9d70e54d48b63e6873effa496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/test_background.png using Guid(bdf11ec9d70e54d48b63e6873effa496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1640384a8d66f75680c920cfa5301f41') in 0.014871 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1.743475 seconds.
-  path: Assets/SimpleAirplaneController/ExampleScene.unity
-  artifactKey: Guid(14866ae5492e87a4bb7e6e126b1ed1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleAirplaneController/ExampleScene.unity using Guid(14866ae5492e87a4bb7e6e126b1ed1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e366060dfcf424bd6015189026f91dd2') in 0.000484 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 338

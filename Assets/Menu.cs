@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-   public void playGame()
+   public void playFreePlayMode()
     {
         SceneManager.LoadScene("ExampleScene");
     }

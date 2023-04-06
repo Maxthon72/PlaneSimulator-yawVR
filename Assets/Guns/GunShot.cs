@@ -12,7 +12,7 @@ public class GunShot : MonoBehaviour
             v = Input.GetKey(KeyCode.Space);
             if (v)
             {
-                GetComponent<Animator>().Play("Scene");
+                GetComponent<Animator>().Play("GunShootAnimation");
             }
 
             

@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\YawVR\Scenes\Flying\Simple\TerrainControllerSimple.cs" />
-    <Compile Include="Assets\AddGunsScript.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\FlatTeardrop.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Common\ButtonControl.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\VectorE.cs" />
@@ -133,6 +132,7 @@
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Common\ConfiguratorBase.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\ChairGenerator\Stretchers.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\Edge.cs" />
+    <Compile Include="Assets\Guns\AddGunsScript.cs" />
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\YawVR\Scripts\UI\RotationLimitsPanel.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\Octahedron.cs" />

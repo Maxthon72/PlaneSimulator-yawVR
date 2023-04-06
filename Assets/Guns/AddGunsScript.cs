@@ -10,7 +10,7 @@ public class Gun_MoveScript : MonoBehaviour
     //GameObject boundedPlane;
     public float gunOffset = 6;
     public GameObject[] numberOfGuns;
-    public float scale = 10f;
+    public float scaleX = 10f, scaleY = 10f, scaleZ = 10f;
     public float firerate = 2;
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class Gun_MoveScript : MonoBehaviour
         for (int i = 0; i < numberOfGuns.Length; i++)
         {
             GameObject go = Instantiate(objPrefab) as GameObject;
-            go.transform.localScale = new Vector3(scale, scale, scale);
+            go.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
             go.GetComponent<Animator>().SetFloat("Speed", firerate);
             numberOfGuns[i] = go;
         }

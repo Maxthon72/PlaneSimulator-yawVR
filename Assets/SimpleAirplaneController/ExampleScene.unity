@@ -422,7 +422,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.7422724e+30, y: 4.9740434e+30, z: 1.02e-43, w: 1e-45}
+  m_BoundingSphereOverride: {x: 5.050951e-39, y: NaN, z: 1.02e-43, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -719,7 +719,9 @@ MonoBehaviour:
   z: 4.18
   gunOffset: 0
   numberOfGuns: []
-  scale: 0.2
+  scaleX: 10
+  scaleY: 10
+  scaleZ: 10
   firerate: 2
 --- !u!1 &718887803
 GameObject:
@@ -1325,7 +1327,9 @@ MonoBehaviour:
   numberOfGuns:
   - {fileID: 0}
   - {fileID: 0}
-  scale: 10
+  scaleX: 10
+  scaleY: 10
+  scaleZ: 10
   firerate: 2
 --- !u!1 &1237095645
 GameObject:
@@ -2330,8 +2334,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909638305}
-  m_LocalRotation: {x: 0.3672001, y: 0.093247734, z: 0.03702808, w: -0.92471504}
-  m_LocalPosition: {x: 402.03107, y: 71.00024, z: 477.5886}
+  m_LocalRotation: {x: 0.15521438, y: 0.26836988, z: 0.043860223, w: -0.94971704}
+  m_LocalPosition: {x: 406.92914, y: 75.84732, z: 475.51273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2497,7 +2501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
   m_LocalRotation: {x: 0.15521438, y: 0.26836988, z: 0.043860223, w: -0.94971704}
-  m_LocalPosition: {x: 406.92914, y: 75.84732, z: 475.51273}
+  m_LocalPosition: {x: 402.21677, y: 78.01629, z: 479.9223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

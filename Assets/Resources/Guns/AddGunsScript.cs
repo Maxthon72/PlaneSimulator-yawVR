@@ -6,11 +6,24 @@ using UnityEngine;
 
 public class Gun_MoveScript : MonoBehaviour
 {
-    public float x = 2.73f, y = 0.8835f, z = 0;
+    [Tooltip("Offset of 1st gun position in x axis (from 1 wing to 2 wing)")]
+    public float x = 2.73f;
+    [Tooltip("Offset of 1st gun position in y axis (under or above wing)")]
+    public float y = 0.8835f;
+    [Tooltip("Offset of 1st gun position in z axis (before or after wings)")]
+    public float z = 0;
     //GameObject boundedPlane;
+    [Tooltip("interval size betweeen guns")]
     public float gunOffset = 6;
+    [Tooltip("sum of all guns")]
     public GameObject[] numberOfGuns;
-    public float scaleX = 10f, scaleY = 10f, scaleZ = 10f;
+
+    [Tooltip("guns scale in x axis (from 1 wing to 2 wing)")]
+    public float scaleX = 10f;
+    [Tooltip("guns scale in y axis (under or above wing)")]
+    public float scaleY = 10f;
+    [Tooltip("guns scale in z axis (before or after wings)")]
+    public float scaleZ = 10f;
     ///public float firerate = 2;
 
     // Start is called before the first frame update

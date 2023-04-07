@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2240278793282574186}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.5036, y: 0, z: -0.065}
   m_LocalScale: {x: 0.06666667, y: 0.06666668, z: 0.06666668}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4181667373253789771}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!82 &3709965431109593445
 AudioSource:
   m_ObjectHideFlags: 0
@@ -260,11 +260,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firerate: 3
-  velocity: 6
-  mm: 8
+  velocity: 3
+  BulletSize: 8
   trailSize: 1
-  trailLive: 0.01
+  fireTrailLive: 0.27
+  smokeTrailLive: 0.8
   maxBullettArray: 100
+  bulletLife: 10
   soundVolume: 15
 --- !u!95 &8617090680820980535
 Animator:

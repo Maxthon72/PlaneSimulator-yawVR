@@ -17,26 +17,35 @@ public class ReleaseBullet : MonoBehaviour
         float velocity;
         float mm;
         float trail;
-        float trailLive;
+        float tFirelive;
+        float tSmokelive;
         GameObject bullet;
         Vector3 direction;
         Vector3 initdir;
+
+        float bulletLife;
+        float bulletLifeLess;
 
         void SetTrail()
         {
             bullet.GetComponent<TrailRenderer>().widthMultiplier = bullet.transform.localScale.y * trail;
             bullet.transform.GetChild(0).GetComponent<TrailRenderer>().widthMultiplier = bullet.transform.localScale.y * trail;
-            bullet.GetComponent<TrailRenderer>().time *= trailLive;
-            bullet.transform.GetChild(0).GetComponent<TrailRenderer>().time *= trailLive;
+
+            bullet.GetComponent<TrailRenderer>().time *= tFirelive;
+            bullet.transform.GetChild(0).GetComponent<TrailRenderer>().time *= tSmokelive;
         }
 
-        public void Init(float vel, float m, float _trail, float _tlive, GameObject preFab, Vector3 initd)
+        public void Init(float vel, float m, float _trail, float _tFirelive, float _tSmokelive, float _bulletLife, GameObject preFab, Vector3 initd)
         {
             velocity = vel;
             mm = m/2;
             initdir = initd;
             trail = _trail/15;
-            trailLive = _tlive;
+            tSmokelive = _tSmokelive;
+            tFirelive = _tFirelive;
+            bulletLife = _bulletLife;
+
+            bulletLifeLess = bulletLife;
 
             bullet = Instantiate(preFab) as GameObject;
             bullet.transform.localScale = new Vector3(mm, mm, mm);
@@ -53,6 +62,7 @@ public class ReleaseBullet : MonoBehaviour
 
         public void Set(GameObject preFab)
         {
+            bulletLifeLess = bulletLife;
             bullet = Instantiate(preFab) as GameObject;
             //bullet.transform.rotation = Quaternion.identity;
             bullet.transform.localScale = new Vector3(mm, mm, mm);
@@ -68,7 +78,16 @@ public class ReleaseBullet : MonoBehaviour
 
         public void bulletMove()
         {
-            bullet.transform.Translate(direction, Space.World);
+            if(!bullet.IsDestroyed())
+            {
+                if (bulletLifeLess < 0)
+                    Destroy(bullet.gameObject);
+                else
+                {
+                    bullet.transform.Translate(direction, Space.World);
+                    bulletLifeLess -= Time.deltaTime;
+                }
+            }
         }
     }
     
@@ -104,7 +123,7 @@ public class ReleaseBullet : MonoBehaviour
             if (bullets.Count < scriptSet.maxBullettArray)
             {
                 Bullet NewBullet = gameObject.AddComponent<Bullet>();
-                NewBullet.Init(scriptSet.velocity, scriptSet.mm, scriptSet.trailSize, scriptSet.trailLive, objPrefab, initvalue);
+                NewBullet.Init(scriptSet.velocity, scriptSet.BulletSize, scriptSet.trailSize, scriptSet.fireTrailLive, scriptSet.smokeTrailLive, scriptSet.bulletLife, objPrefab, initvalue);
                 bullets.Add(NewBullet);
             }
             else

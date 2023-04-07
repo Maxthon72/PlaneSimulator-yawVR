@@ -422,8 +422,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.564175e+28, y: 7.8680306e+31, z: 1.8393144e+25,
-    w: 5.733417e-39}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1.02e-43, w: 7e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2498,8 +2497,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: 0.020869076, y: 0.9761148, z: 0.18671398, w: -0.10909797}
-  m_LocalPosition: {x: 400.3994, y: 64.2582, z: 507.6157}
+  m_LocalRotation: {x: -0.0041745803, y: -0.71845794, z: 0.004310177, w: -0.69554454}
+  m_LocalPosition: {x: 396.6251, y: -69.33232, z: 1301.2162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

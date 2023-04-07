@@ -83,7 +83,6 @@
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneFuelTank.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\MazeGenerator.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\InputModules\AirplaneInputDelegate.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\IFacadeLayout.cs" />
@@ -109,6 +108,7 @@
     <Compile Include="Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\YawVR\Scripts\YawTCPClient.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\GizmosE.cs" />
+    <Compile Include="Assets\Menu\Menu.cs" />
     <Compile Include="Assets\YawVR\Scripts\YawController.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\MeshDraftPrimitives.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneController.cs" />
@@ -133,12 +133,12 @@
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\ChairGenerator\Stretchers.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\Edge.cs" />
     <Compile Include="Assets\Guns\AddGunsScript.cs" />
-    <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\YawVR\Scripts\UI\RotationLimitsPanel.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\Octahedron.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\ChairGenerator\Backs.cs" />
     <Compile Include="Assets\Guns\Bak.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+    <Compile Include="Assets\Menu\PauseMenu.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\LowPolyTerrainGenerator\LowPolyTerrainGeneratorConfigurator.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\BuildingGeneratorConfigurator.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Common\TextControl.cs" />

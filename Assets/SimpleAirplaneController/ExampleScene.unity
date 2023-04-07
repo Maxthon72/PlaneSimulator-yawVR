@@ -422,7 +422,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.050951e-39, y: NaN, z: 1.02e-43, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: -3.225546e-37, z: 5.63e-43, w: 1.2905764e-22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -722,7 +722,6 @@ MonoBehaviour:
   scaleX: 10
   scaleY: 10
   scaleZ: 10
-  firerate: 2
 --- !u!1 &718887803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1329,6 @@ MonoBehaviour:
   scaleX: 10
   scaleY: 10
   scaleZ: 10
-  firerate: 2
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,8 +2498,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: 0.15521438, y: 0.26836988, z: 0.043860223, w: -0.94971704}
-  m_LocalPosition: {x: 402.21677, y: 78.01629, z: 479.9223}
+  m_LocalRotation: {x: 0.063784756, y: 0.9360895, z: 0.2365314, w: -0.25242978}
+  m_LocalPosition: {x: 406.2663, y: 70.22802, z: 495.66406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

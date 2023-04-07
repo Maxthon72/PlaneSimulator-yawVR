@@ -422,7 +422,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: NaN, z: 9.1835e-41, w: 0}
+  m_BoundingSphereOverride: {x: 7.564175e+28, y: 7.8680306e+31, z: 1.8393144e+25,
+    w: 5.733417e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1325,10 +1326,9 @@ MonoBehaviour:
   gunOffset: 6
   numberOfGuns:
   - {fileID: 0}
-  - {fileID: 0}
-  scaleX: 10
-  scaleY: 10
-  scaleZ: 10
+  scaleX: 5
+  scaleY: 5
+  scaleZ: 5
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,8 +2498,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: -0.015360587, y: 0.9845957, z: 0.12772207, w: 0.11841661}
-  m_LocalPosition: {x: 391.13678, y: 61.71031, z: 512.13666}
+  m_LocalRotation: {x: 0.020869076, y: 0.9761148, z: 0.18671398, w: -0.10909797}
+  m_LocalPosition: {x: 400.3994, y: 64.2582, z: 507.6157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2629,16 +2629,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1202546668}
+    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 1202546667}
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1202546666}
-    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1202546668}
   m_SourcePrefab: {fileID: 100100000, guid: 36c262abfaa896d42a13deb3cccf0b62, type: 3}
 --- !u!1001 &6953552092295742181
 PrefabInstance:

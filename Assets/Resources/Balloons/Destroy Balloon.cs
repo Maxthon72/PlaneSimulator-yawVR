@@ -15,7 +15,7 @@ public class DestroyBalloon : MonoBehaviour
         {
             this.GetComponent<Animator>().Play("Destruction");
             destroyed = true;
-            print("Collision");
+            Destroy(this.GetComponent<Collider>());
         }
     }
     // Start is called before the first frame update

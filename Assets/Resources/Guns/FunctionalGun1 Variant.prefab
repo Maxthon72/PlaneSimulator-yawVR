@@ -263,8 +263,8 @@ MonoBehaviour:
   velocity: 3
   BulletSize: 8
   trailSize: 1
-  fireTrailLive: 0.27
-  smokeTrailLive: 0.8
+  fireTrailLive: 0.4
+  smokeTrailLive: 0.04
   maxBullettArray: 100
   bulletLife: 10
   soundVolume: 15

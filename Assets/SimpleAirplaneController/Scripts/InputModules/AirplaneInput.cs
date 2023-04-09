@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace SimplePlaneController {
     public class AirplaneInput : MonoBehaviour {
@@ -41,6 +43,13 @@ namespace SimplePlaneController {
         public KeyCode engineCutoffKey = KeyCode.K;
         public KeyCode lightToggleKey = KeyCode.L;
         public KeyCode langingGearToggleKey = KeyCode.Q;
+
+        //AI
+        bool AI = true;
+        GameObject objective;
+        Vector3 vecdest, front, up, down, left, right;
+        Vector3 frontvec = new Vector3(0, 0, 1), upvec = new Vector3(0, 1, 0), downvec = new Vector3(0, -1, 0), leftvec = new Vector3(-1, 0, 0), rightvec = new Vector3(1, 0, 0);
+        bool bleft, bright, bup, bdown;
 
 
         /* Properties */
@@ -118,7 +127,10 @@ namespace SimplePlaneController {
 
         /* Methods */
         void Start() {
-            if(startingThrottle > 0.01f){
+            objective = GameObject.FindGameObjectWithTag("Player");
+            if (this.gameObject == objective)
+                AI = false;
+            if (startingThrottle > 0.01f){
                 stickyThrottle = Mathf.Clamp01(startingThrottle);
             }
         }
@@ -127,37 +139,172 @@ namespace SimplePlaneController {
             GetInput();
         }
 
+        void calcVecs()
+        {
+            //front = this.transform.rotation * frontvec;
+            up = this.transform.rotation * upvec;
+            down = this.transform.rotation * downvec;
+            left = this.transform.rotation * leftvec;
+            right = this.transform.rotation * rightvec;
+        }
+
         public virtual void GetInput(){
-            pitch = ApplyAxisInput(pitch, pitchUpKey, pitchDownKey);
-            roll = ApplyAxisInput(roll, rollLeftKey, rollRightKey);
-            yaw = ApplyAxisInput(yaw, yawLeftKey, yawRightKey);
+            if (AI)
+            {
+                vecdest = objective.transform.position - this.transform.position;
+                calcVecs();
+                // vecdest = vecdest.normalized;
+                //
+              //  Vector3.Magnitude(vecdest - (this.transform.position + upvec)) <= Vector3.Magnitude(vecdest - (this.transform.position + downvec);
+                if (Vector3.Magnitude(vecdest - up) <= Vector3.Magnitude(vecdest - down))
+                {
+                    //UP
+                    bup = true;
+                    bdown = false;
+                }
+                else
+                {
+                    bup = false;
+                    bdown = true;
+                }
 
-            throttle = ApplyAxisInput(throttle, throttleUpKey, throttleDownKey);
-            ApplyStickyThrottle();
+                if (Vector3.Magnitude(vecdest - right) <= Vector3.Magnitude(vecdest - left))
+                {
+                    //RIGHT
+                    bright = true;
+                    bleft = false;
 
-            brake = Input.GetKey(brakeKey) ? 1f : 0f;
+                }
+                else
+                {
+                    bright = false;
+                    bleft = true;
+                }
+                //3500 3000 3000
+                /*if (true)//jezeli odleglosc na x zbyt mala, to dopasuj rotacje
+                {
+                    if (Vector3.Magnitude(vecdest - right) <= Vector3.Magnitude(vecdest - left))
+                    {
+                        //RIGHT
+                        bright = true;
+                        bleft = false;
+                        
+                    }
+                    else
+                    {
+                        bright = false;
+                        bleft = true;
+                    }
+                }
+                else
+                {
+                    if(objective.transform.rotation.z > this.transform.rotation.z)
+                    {
+                        bright = false;
+                        bleft = true;
+                    }
+                    else
+                    {
+                        bright = true;
+                        bleft = false;
+                    }
+                }*/
 
-            if(Input.GetKeyDown(flapsDownKey)){
-                flaps ++;
+                
+                //print("up:" + bup + " down:" + bdown);
+                print("up:" + up + " down:" + down);
+
+                /*if (veccur.y > vecdest.y)
+                {
+                    down = true;
+                    up = false;
+                }
+                else
+                {
+                    up = true;
+                    down = false;
+                }*/
+
+                /*if (veccur.x > vecdest.x)
+                {
+                    left = true;
+                }
+                else
+                {
+                    right = true;
+                }*/
+
+                pitch = ApplyAxisInputAI(pitch, bdown, bup);
+                roll = ApplyAxisInputAI(roll, bleft, bright);
+              //  yaw = ApplyAxisInputAI(yaw, left, right);
+
+                throttle = ApplyAxisInput(throttle, throttleUpKey, throttleDownKey);
+                ApplyStickyThrottle();
+
+                brake = Input.GetKey(brakeKey) ? 1f : 0f;
+
+                if (Input.GetKeyDown(flapsDownKey))
+                {
+                    flaps++;
+                }
+
+                if (Input.GetKeyDown(flapsUpKey))
+                {
+                    flaps--;
+                }
+
+                flaps = Mathf.Clamp(flaps, 0, maxFlaps);
+
+                /* Due to sample differences in Fixed Updates, compared to Updates, these may revert too quickly for the accompanying processes to track */
+                /* As such the sample timer was introduced to ensure this is maintained, meaning they are left active for longer */
+                cameraSwitch = Input.GetKeyDown(cameraSwitchKey);
+                engineCutoff = Input.GetKeyDown(engineCutoffKey);
+                lightToggle = Input.GetKeyDown(lightToggleKey);
+
+                if (Input.GetKeyDown(langingGearToggleKey))
+                {
+                    landingGearToggle = !landingGearToggle;
+                }
+
+                ApplyAutoBrake();
+
             }
+            else
+            {
+                pitch = ApplyAxisInput(pitch, pitchUpKey, pitchDownKey);
+                roll = ApplyAxisInput(roll, rollLeftKey, rollRightKey);
+                yaw = ApplyAxisInput(yaw, yawLeftKey, yawRightKey);
 
-            if(Input.GetKeyDown(flapsUpKey)){
-                flaps --;
+                throttle = ApplyAxisInput(throttle, throttleUpKey, throttleDownKey);
+                ApplyStickyThrottle();
+
+                brake = Input.GetKey(brakeKey) ? 1f : 0f;
+
+                if (Input.GetKeyDown(flapsDownKey))
+                {
+                    flaps++;
+                }
+
+                if (Input.GetKeyDown(flapsUpKey))
+                {
+                    flaps--;
+                }
+
+                flaps = Mathf.Clamp(flaps, 0, maxFlaps);
+
+                /* Due to sample differences in Fixed Updates, compared to Updates, these may revert too quickly for the accompanying processes to track */
+                /* As such the sample timer was introduced to ensure this is maintained, meaning they are left active for longer */
+                cameraSwitch = Input.GetKeyDown(cameraSwitchKey);
+                engineCutoff = Input.GetKeyDown(engineCutoffKey);
+                lightToggle = Input.GetKeyDown(lightToggleKey);
+
+                if (Input.GetKeyDown(langingGearToggleKey))
+                {
+                    landingGearToggle = !landingGearToggle;
+                }
+
+                ApplyAutoBrake();
             }
-
-            flaps = Mathf.Clamp(flaps, 0, maxFlaps);
-
-            /* Due to sample differences in Fixed Updates, compared to Updates, these may revert too quickly for the accompanying processes to track */
-            /* As such the sample timer was introduced to ensure this is maintained, meaning they are left active for longer */
-            cameraSwitch = Input.GetKeyDown(cameraSwitchKey);
-            engineCutoff = Input.GetKeyDown(engineCutoffKey);
-            lightToggle  = Input.GetKeyDown(lightToggleKey);
-
-            if (Input.GetKeyDown(langingGearToggleKey)) {
-                landingGearToggle = !landingGearToggle;
-            }
-
-            ApplyAutoBrake();
 
         }
 
@@ -173,6 +320,37 @@ namespace SimplePlaneController {
                 } else if(axisValue < -inputSensitivity) {
                     axisValue += inputSensitivity;
                 } else {
+                    axisValue = 0f;
+                }
+            }
+
+            axisValue = Mathf.Clamp(axisValue, -1f, 1f);
+            return axisValue;
+        }
+
+        protected float ApplyAxisInputAI(float axisValue, bool positiveKey, bool negativeKey)
+        {
+            if (positiveKey)
+            {
+                axisValue += inputSensitivity;
+            }
+            else if (negativeKey)
+            {
+                axisValue -= inputSensitivity;
+            }
+            else
+            {
+                //Normalize to 0
+                if (axisValue > inputSensitivity)
+                {
+                    axisValue -= inputSensitivity;
+                }
+                else if (axisValue < -inputSensitivity)
+                {
+                    axisValue += inputSensitivity;
+                }
+                else
+                {
                     axisValue = 0f;
                 }
             }

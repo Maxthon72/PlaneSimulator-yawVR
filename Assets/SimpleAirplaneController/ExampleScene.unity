@@ -194,12 +194,12 @@ PrefabInstance:
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 406.26
+      value: 390.75
       objectReference: {fileID: 0}
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 984.51
+      value: 977.02
       objectReference: {fileID: 0}
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
@@ -563,7 +563,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.4405384e-30, y: 9.1858e-41, z: 4.591775e-39, w: 4.1003012e-19}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1801,6 +1801,7 @@ MonoBehaviour:
   gunOffset: 6
   numberOfGuns:
   - {fileID: 0}
+  - {fileID: 0}
   scaleX: 5
   scaleY: 5
   scaleZ: 5
@@ -2313,7 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b18d728c3547e143bd92656802e4ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyLifeTime: 10
+  DestroyLifeTime: 40
   hp: 100
   bulletdamage: 20
   input: {fileID: 1537395377}
@@ -3071,7 +3072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 209.12547, y: -244.09254, z: -839.5624}
+  m_LocalPosition: {x: 368.8447, y: -727.8808, z: 288.40637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

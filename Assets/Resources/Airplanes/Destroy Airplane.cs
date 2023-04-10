@@ -7,12 +7,14 @@ using UnityEngine;
 
 public class DestroyAirplane : MonoBehaviour
 {
-    public float DestroyLifeTime = 20;
+    public float DestroyLifeTime = 40;
     public int hp = 100;
     public int bulletdamage = 20;
 
     bool destroyed = false;
     public AirplaneInput input;
+    GameObject objPrefab;
+    int delayExpl = 50;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,11 +22,22 @@ public class DestroyAirplane : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             if(!other.gameObject.IsDestroyed())
+            {
                 Destroy(other.gameObject);
+                GameObject go = Instantiate(objPrefab) as GameObject;
+                go.transform.position = this.transform.position;
+            }
+                
             hp -= bulletdamage;
             if (hp <= 0)
             {
                 destroyed = true;
+                if (hp <= -bulletdamage - bulletdamage)
+                {
+                    GameObject go = Instantiate(objPrefab) as GameObject;
+                    go.transform.position = this.transform.position;
+                    Destroy(this.gameObject);
+                }
             }
                 
             print(hp);
@@ -46,7 +59,7 @@ public class DestroyAirplane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        objPrefab = Resources.Load("Explosions/Functional Explosion") as GameObject;
     }
 
     // Update is called once per frame
@@ -54,12 +67,20 @@ public class DestroyAirplane : MonoBehaviour
     {
         if (destroyed)
         {
-            input.throttle = -1;
-            print("destroyed");
+            input.throttle = -100;
             DestroyLifeTime -= Time.deltaTime;
+            delayExpl++;
+            if(delayExpl>=50)
+            {
+                GameObject go = Instantiate(objPrefab) as GameObject;
+                go.transform.position = this.transform.position;
+                delayExpl = 0;
+            }
+            
+            
             if (DestroyLifeTime < 0)
             {
-              //  Destroy(this.gameObject);
+                Destroy(this.gameObject);
             }
         }
     }

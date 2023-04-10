@@ -56,6 +56,7 @@ public class Gun_MoveScript : MonoBehaviour
         for (int i = 0; i < numberOfGuns.Length; i++)
         {
             GameObject go = Instantiate(Gun) as GameObject;
+            go.transform.parent = this.gameObject.transform;
             go.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
            /// go.GetComponent<Animator>().SetFloat("Speed", firerate);
             numberOfGuns[i] = go;

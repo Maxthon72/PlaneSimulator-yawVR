@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firerate: 3
-  velocity: 2
+  velocity: 8
   BulletSize: 8
   trailSize: 1
   fireTrailLive: 0.4

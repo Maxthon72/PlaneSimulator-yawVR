@@ -194,12 +194,12 @@ PrefabInstance:
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 390.24
+      value: 406.26
       objectReference: {fileID: 0}
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 975.5
+      value: 984.51
       objectReference: {fileID: 0}
     - target: {fileID: 7528149441953950108, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
         type: 3}
@@ -563,7 +563,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 3e-45, z: 4.249e-42, w: 0}
+  m_BoundingSphereOverride: {x: 2.4405384e-30, y: 9.1858e-41, z: 4.591775e-39, w: 4.1003012e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -837,6 +837,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyLifeTime: 10
+  hp: 100
+  bulletdamage: 20
+  input: {fileID: 0}
 --- !u!1001 &491086321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1798,7 +1801,6 @@ MonoBehaviour:
   gunOffset: 6
   numberOfGuns:
   - {fileID: 0}
-  - {fileID: 0}
   scaleX: 5
   scaleY: 5
   scaleZ: 5
@@ -1937,7 +1939,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b18d728c3547e143bd92656802e4ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyLifeTime: 10
+  DestroyLifeTime: 20
+  hp: 100
+  bulletdamage: 20
+  input: {fileID: 1202546676}
+--- !u!114 &1202546676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5379478909106304531, guid: 36c262abfaa896d42a13deb3cccf0b62,
+    type: 3}
+  m_PrefabInstance: {fileID: 5379478908373648056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202546660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9e499c280b03142b85beb304955223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2314,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyLifeTime: 10
+  hp: 100
+  bulletdamage: 20
+  input: {fileID: 1537395377}
+--- !u!114 &1537395377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7528149441953950111, guid: 209dd9c8ee9318f4cacc0ce6f55de58e,
+    type: 3}
+  m_PrefabInstance: {fileID: 47314074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537395357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9e499c280b03142b85beb304955223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568926349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,8 +3070,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: -0.09280934, y: 0.17969999, z: 0.017033515, w: 0.9791855}
-  m_LocalPosition: {x: 386.51144, y: -789.5753, z: 432.7251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 209.12547, y: -244.09254, z: -839.5624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

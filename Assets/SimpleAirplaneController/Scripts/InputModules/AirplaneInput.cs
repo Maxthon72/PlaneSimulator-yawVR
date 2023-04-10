@@ -11,7 +11,8 @@ namespace SimplePlaneController {
         protected float pitch = 0f;
         protected float roll = 0f;
         protected float yaw = 0f;
-        protected float throttle = 0f;
+        [HideInInspector]
+        public float throttle = 0f;
         protected int flaps = 0;
         protected float brake = 0f;
         protected float stickyThrottle;

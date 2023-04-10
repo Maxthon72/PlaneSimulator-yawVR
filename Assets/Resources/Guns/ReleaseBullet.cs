@@ -46,8 +46,14 @@ public class ReleaseBullet : MonoBehaviour
             bulletLife = _bulletLife;
 
             bulletLifeLess = bulletLife;
-
+            
             bullet = Instantiate(preFab) as GameObject;
+            //collision
+            BoxCollider col = bullet.GetComponent<BoxCollider>();
+            float zOff = -velocity / mm;
+            col.size = new Vector3(col.size.x, col.size.y, col.size.z - zOff);
+            col.center = new Vector3(col.center.x, col.center.y, col.center.z+zOff/2);
+
             bullet.transform.localScale = new Vector3(mm, mm, mm);
             SetTrail();
 
@@ -64,6 +70,13 @@ public class ReleaseBullet : MonoBehaviour
         {
             bulletLifeLess = bulletLife;
             bullet = Instantiate(preFab) as GameObject;
+
+            //collision
+            BoxCollider col = bullet.GetComponent<BoxCollider>();
+            float zOff = -velocity / mm;
+            col.size = new Vector3(col.size.x, col.size.y, col.size.z - zOff);
+            col.center = new Vector3(col.center.x, col.center.y, col.center.z + zOff / 2);
+
             //bullet.transform.rotation = Quaternion.identity;
             bullet.transform.localScale = new Vector3(mm, mm, mm);
             SetTrail();

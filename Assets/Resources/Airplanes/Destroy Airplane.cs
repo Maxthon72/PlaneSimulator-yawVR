@@ -1,26 +1,36 @@
+using SimplePlaneController;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DestroyAirplane : MonoBehaviour
 {
-    public float DestroyLifeTime = 10;
+    public float DestroyLifeTime = 20;
+    public int hp = 100;
+    public int bulletdamage = 20;
 
     bool destroyed = false;
+    public AirplaneInput input;
 
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.gameObject.tag == "Bullet")
         {
-            print("BUM?");
+            if(!other.gameObject.IsDestroyed())
+                Destroy(other.gameObject);
+            hp -= bulletdamage;
+            if (hp <= 0)
+            {
+                destroyed = true;
+            }
+                
+            print(hp);
             //this.GetComponent<Animator>().Play("Destruction");
-            destroyed = true;
             this.GetComponent<TrailRenderer>().enabled = true;
-            this.GetComponent<TrailRenderer>().widthMultiplier = 2;
-            this.GetComponent<TrailRenderer>().startColor=Color.black;
-            transform.GetComponent<Renderer>().material.color = new Color(0.1f, 0.1f, 0.1f);
+            this.GetComponent<TrailRenderer>().widthMultiplier = (100-hp)/20;
         }
     }
     //private void OnTriggerEnter(Collider other)
@@ -44,10 +54,12 @@ public class DestroyAirplane : MonoBehaviour
     {
         if (destroyed)
         {
+            input.throttle = -1;
+            print("destroyed");
             DestroyLifeTime -= Time.deltaTime;
             if (DestroyLifeTime < 0)
             {
-           //     Destroy(this.gameObject);
+              //  Destroy(this.gameObject);
             }
         }
     }

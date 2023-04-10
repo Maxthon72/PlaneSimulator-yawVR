@@ -43,7 +43,6 @@ public class GunShot : MonoBehaviour
         else
         v = Input.GetKey(KeyCode.Space);
 
-
         if (v && !shooted)
         {
             time = animTime;

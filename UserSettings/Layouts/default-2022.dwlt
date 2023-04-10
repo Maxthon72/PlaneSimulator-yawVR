@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 62
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 464.66663
     height: 926
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -414,9 +414,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2af5ffff
-      m_LastClickedID: -2774
-      m_ExpandedIDs: 10faffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ce05feff02f4ffff6cf4ffffbaf8ffff04faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Biplane(air)
@@ -427,7 +427,7 @@ MonoBehaviour:
           y: 0
           width: 0
           height: 0
-        m_UserData: -2774
+        m_UserData: -2942
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -583,9 +583,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -244, y: 10}
+      snapOffset: {x: -244, y: -559.3334}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: Scene View/Camera
       index: 1
       layout: 4
@@ -771,9 +771,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 387.73047, y: 981.54895, z: 465.2344}
+    m_Target: {x: 391.08688, y: 975.973, z: 506.326}
     speed: 2
-    m_Value: {x: 387.73047, y: 981.54895, z: 465.2344}
+    m_Value: {x: 391.08688, y: 975.973, z: 506.326}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -798,7 +798,7 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
         m_Target: 1
@@ -819,13 +819,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08448762, y: 0.017934678, z: -0.0015209449, w: 0.99626327}
+    m_Target: {x: 0.092810206, y: 0.17970063, z: -0.01703134, w: 0.9791902}
     speed: 2
-    m_Value: {x: 0.084487505, y: 0.017934654, z: -0.0015209429, w: 0.99626195}
+    m_Value: {x: 0.09280977, y: 0.17969976, z: -0.017031258, w: 0.9791855}
   m_Size:
-    m_Target: 8.479171
+    m_Target: 6.5596385
     speed: 2
-    m_Value: 8.479171
+    m_Value: 6.5596385
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -940,10 +940,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 2ef340add425f4947b244e222581755a,
+  m_AnimatorController: {fileID: 9100000, guid: f111bdbcbb44cef4e92db0d368562e26,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 2950027172916363095, guid: 2ef340add425f4947b244e222581755a,
+  - m_Target: {fileID: 2816692708547301802, guid: f111bdbcbb44cef4e92db0d368562e26,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -1005,23 +1005,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Airplanes
+    - Assets/Resources/Guns
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Airplanes
+  - Assets/Resources/Guns
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Wlasne\GitHub\PlaneSimulator-yawVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 29.666687}
-    m_SelectedIDs: de6d0000
-    m_LastClickedID: 28126
-    m_ExpandedIDs: 00000000046d0000d06d000000ca9a3b
+    scrollPos: {x: 0, y: 89.66669}
+    m_SelectedIDs: 826e0000
+    m_LastClickedID: 28290
+    m_ExpandedIDs: 000000007e6e0000806e0000826e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000046d0000
+    m_ExpandedIDs: 000000007e6e0000806e0000826e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1074,8 +1074,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2af5ffff
-    m_LastClickedInstanceID: -2774
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000087b000000000000c8630000ac6c0000d0750000e2010000
     m_RenameOverlay:
@@ -1093,7 +1093,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 8}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0

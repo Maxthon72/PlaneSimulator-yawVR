@@ -1,3 +1,4 @@
+using SimplePlaneController;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ public class GunShot : MonoBehaviour
     AudioSource shotSound;
     float animTime;
     float time;
+    public AiShoot AI;
 
     public SetGun scriptSet;
     private void Start()
@@ -24,13 +26,21 @@ public class GunShot : MonoBehaviour
         shotSound = this.transform.GetChild(9).GetComponent<AudioSource>();
         shotSound.volume = scriptSet.soundVolume/100.0f;
 
-        GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
+       // GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
         // GameObject go = Instantiate(objPrefab) as GameObject;
-        animTime = objPrefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.First(a => a.name == "Scene").length / scriptSet.firerate;// / objPrefab.GetComponent<Animator>().GetFloat("Speed");
-
+        animTime = this.GetComponent<Animator>().runtimeAnimatorController.animationClips.First(a => a.name == "Scene").length / scriptSet.firerate;// / objPrefab.GetComponent<Animator>().GetFloat("Speed");
     }
     void Update()
     {
+        if(scriptSet.isForAi)
+        {
+            if (AI.shoot)
+            {
+                v = true;
+            }
+            else v = false;
+        }
+        else
         v = Input.GetKey(KeyCode.Space);
 
 

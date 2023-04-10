@@ -25,7 +25,8 @@ public class Gun_MoveScript : MonoBehaviour
     [Tooltip("guns scale in z axis (before or after wings)")]
     public float scaleZ = 10f;
     ///public float firerate = 2;
-
+    [Tooltip("Prefab gun")]
+    public GameObject Gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +55,7 @@ public class Gun_MoveScript : MonoBehaviour
         GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
         for (int i = 0; i < numberOfGuns.Length; i++)
         {
-            GameObject go = Instantiate(objPrefab) as GameObject;
+            GameObject go = Instantiate(Gun) as GameObject;
             go.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
            /// go.GetComponent<Animator>().SetFloat("Speed", firerate);
             numberOfGuns[i] = go;

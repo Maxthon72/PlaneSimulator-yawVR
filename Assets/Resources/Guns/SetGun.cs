@@ -23,6 +23,8 @@ public class SetGun : MonoBehaviour
     public float bulletLife = 10;
     [Tooltip("Sound volume of a gun shot [0 - 100]")]
     public float soundVolume = 15;
+    [Tooltip("space will not occur shot")]
+    public bool isForAi = false;
     
     void Start()
     {

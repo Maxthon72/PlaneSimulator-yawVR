@@ -47,8 +47,8 @@ namespace SimplePlaneController {
         //AI
         bool AI = true;
         GameObject objective;
-        Vector3 vecdest, front, up, down, left, right;
-        Vector3 frontvec = new Vector3(0, 0, 1), upvec = new Vector3(0, 1, 0), downvec = new Vector3(0, -1, 0), leftvec = new Vector3(-1, 0, 0), rightvec = new Vector3(1, 0, 0);
+        Vector3 vecdest, up, down, left, right;
+        Vector3 upvec = new Vector3(0, 1, 0), downvec = new Vector3(0, -1, 0), leftvec = new Vector3(-1, 0, 0), rightvec = new Vector3(1, 0, 0);
         bool bleft, bright, bup, bdown;
 
 
@@ -212,7 +212,7 @@ namespace SimplePlaneController {
 
                 
                 //print("up:" + bup + " down:" + bdown);
-                print("up:" + up + " down:" + down);
+               // print("up:" + up + " down:" + down);
 
                 /*if (veccur.y > vecdest.y)
                 {

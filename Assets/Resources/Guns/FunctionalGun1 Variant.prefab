@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65e57740e17cb643a6ad643286a0f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firerate: 6
+  firerate: 10
   velocity: 8
   BulletSize: 8
   trailSize: 1

@@ -16,7 +16,7 @@ public class Gun_MoveScript : MonoBehaviour
     [Tooltip("interval size betweeen guns")]
     public float gunOffset = 6;
     [Tooltip("sum of all guns")]
-    public GameObject[] numberOfGuns;
+    public List<GameObject> numberOfGuns;
 
     [Tooltip("guns scale in x axis (from 1 wing to 2 wing)")]
     public float scaleX = 10f;
@@ -53,7 +53,7 @@ public class Gun_MoveScript : MonoBehaviour
         gunOffset *= 0.1f;
 
         GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
-        for (int i = 0; i < numberOfGuns.Length; i++)
+        for (int i = 0; i < numberOfGuns.Count; i++)
         {
             GameObject go = Instantiate(Gun) as GameObject;
             go.transform.parent = this.gameObject.transform;
@@ -92,7 +92,7 @@ public class Gun_MoveScript : MonoBehaviour
 
         bool leftGun = false;
 
-        for (int i = 0; i < numberOfGuns.Length; i++)
+        for (int i = 0; i < numberOfGuns.Count; i++)
         {
             int j = i / 2;
             numberOfGuns[i].transform.position = this.transform.position;

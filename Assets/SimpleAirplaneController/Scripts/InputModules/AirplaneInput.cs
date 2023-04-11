@@ -45,12 +45,15 @@ namespace SimplePlaneController {
         public KeyCode lightToggleKey = KeyCode.L;
         public KeyCode langingGearToggleKey = KeyCode.Q;
 
+        DestroyAirplane destroyed;
         //AI
-        bool AI = true;
+        [HideInInspector]
+        public bool AI = true;
         GameObject objective;
         Vector3 vecdest, up, down, left, right;
         Vector3 upvec = new Vector3(0, 1, 0), downvec = new Vector3(0, -1, 0), leftvec = new Vector3(-1, 0, 0), rightvec = new Vector3(1, 0, 0);
-        bool bleft, bright, bup, bdown;
+        [HideInInspector]
+        public bool bleft, bright, bup, bdown;
 
 
         /* Properties */
@@ -128,6 +131,7 @@ namespace SimplePlaneController {
 
         /* Methods */
         void Start() {
+            destroyed = this.GetComponent<DestroyAirplane>();
             objective = GameObject.FindGameObjectWithTag("Player");
             if (this.gameObject == objective)
                 AI = false;
@@ -152,35 +156,39 @@ namespace SimplePlaneController {
         public virtual void GetInput(){
             if (AI)
             {
-                vecdest = objective.transform.position - this.transform.position;
-                calcVecs();
-                // vecdest = vecdest.normalized;
-                //
-              //  Vector3.Magnitude(vecdest - (this.transform.position + upvec)) <= Vector3.Magnitude(vecdest - (this.transform.position + downvec);
-                if (Vector3.Magnitude(vecdest - up) <= Vector3.Magnitude(vecdest - down))
+                if (!destroyed.destroyed)
                 {
-                    //UP
-                    bup = true;
-                    bdown = false;
-                }
-                else
-                {
-                    bup = false;
-                    bdown = true;
-                }
+                    vecdest = objective.transform.position - this.transform.position;
+                    calcVecs();
+                    // vecdest = vecdest.normalized;
+                    //
+                    //  Vector3.Magnitude(vecdest - (this.transform.position + upvec)) <= Vector3.Magnitude(vecdest - (this.transform.position + downvec);
+                    if (Vector3.Magnitude(vecdest - up) <= Vector3.Magnitude(vecdest - down))
+                    {
+                        //UP
+                        bup = true;
+                        bdown = false;
+                    }
+                    else
+                    {
+                        bup = false;
+                        bdown = true;
+                    }
 
-                if (Vector3.Magnitude(vecdest - right) <= Vector3.Magnitude(vecdest - left))
-                {
-                    //RIGHT
-                    bright = true;
-                    bleft = false;
+                    if (Vector3.Magnitude(vecdest - right) <= Vector3.Magnitude(vecdest - left))
+                    {
+                        //RIGHT
+                        bright = true;
+                        bleft = false;
 
+                    }
+                    else
+                    {
+                        bright = false;
+                        bleft = true;
+                    }
                 }
-                else
-                {
-                    bright = false;
-                    bleft = true;
-                }
+                
                 //3500 3000 3000
                 /*if (true)//jezeli odleglosc na x zbyt mala, to dopasuj rotacje
                 {
@@ -239,7 +247,7 @@ namespace SimplePlaneController {
                 roll = ApplyAxisInputAI(roll, bleft, bright);
               //  yaw = ApplyAxisInputAI(yaw, left, right);
 
-                throttle = ApplyAxisInput(throttle, throttleUpKey, throttleDownKey);
+                throttle = ApplyAxisInputAI(throttle, false, destroyed.destroyed);
                 ApplyStickyThrottle();
 
                 brake = Input.GetKey(brakeKey) ? 1f : 0f;

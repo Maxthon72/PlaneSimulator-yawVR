@@ -8,19 +8,23 @@ using UnityEngine;
 public class DestroyAirplane : MonoBehaviour
 {
     public float DestroyLifeTime = 40;
-    public int hp = 100;
+    public int hp = 100, maxhp;
     public int bulletdamage = 20;
 
-    bool destroyed = false;
-    public AirplaneInput input;
-    GameObject objPrefab;
+    public bool destroyed = false;
+    GameObject objPrefab, objPrefab2;
     int delayExpl = 50;
+    int massacrated;
+    bool notMassacre = true;
+    AudioSource hittedSound;
 
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.gameObject.tag == "Bullet")
         {
+            hittedSound.Play();
+
             if(!other.gameObject.IsDestroyed())
             {
                 Destroy(other.gameObject);
@@ -31,19 +35,48 @@ public class DestroyAirplane : MonoBehaviour
             hp -= bulletdamage;
             if (hp <= 0)
             {
-                destroyed = true;
-                if (hp <= -bulletdamage - bulletdamage)
+                if (this.gameObject.tag == "Player")
                 {
-                    GameObject go = Instantiate(objPrefab) as GameObject;
-                    go.transform.position = this.transform.position;
-                    Destroy(this.gameObject);
+                    GetComponent<AirplaneInput>().AI = true;
+                    GetComponent<AirplaneInput>().bdown= true;
+                }
+
+                destroyed = true;
+                if (hp <= massacrated && notMassacre)
+                {
+                    
+                    notMassacre = false;
+                    //this.transform.GetChild(0).GetChild(0).transform.Rotate(new Vector3(10f, 5f, 5f));
+                    var mats = this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().materials;
+                    foreach(var mat in mats)
+                    {
+                        mat.color = new Color(0,0,0);
+                    }
+                    for(int i=1;i< this.transform.GetChild(0).childCount;i++)
+                    {
+                        Destroy(this.transform.GetChild(0).GetChild(i).gameObject);
+                    }
+                    foreach (GameObject gun in this.GetComponent<Gun_MoveScript>().numberOfGuns)
+                    {
+                        Destroy(gun);
+                    }
+                    this.GetComponent<Gun_MoveScript>().numberOfGuns.Clear();
+                    // this.transform.GetChild(0).GetChild(0).transform.Translate(new Vector3(2f, 1f, 0));
+                    //go.transform.localScale = new Vector3(1500, 1500, 1500);
+                    //Destroy(this.gameObject);
                 }
             }
                 
             print(hp);
             //this.GetComponent<Animator>().Play("Destruction");
-            this.GetComponent<TrailRenderer>().enabled = true;
-            this.GetComponent<TrailRenderer>().widthMultiplier = (100-hp)/20;
+            if(notMassacre)
+            {
+                int x = (maxhp - hp) / 20;
+                this.GetComponent<TrailRenderer>().enabled = true;
+                this.GetComponent<TrailRenderer>().widthMultiplier = x;
+                this.GetComponent<TrailRenderer>().time = 5 + x/4;
+            }
+            
         }
     }
     //private void OnTriggerEnter(Collider other)
@@ -60,6 +93,12 @@ public class DestroyAirplane : MonoBehaviour
     void Start()
     {
         objPrefab = Resources.Load("Explosions/Functional Explosion") as GameObject;
+        objPrefab2 = Resources.Load("Explosions/Functional Explosion2") as GameObject;
+        massacrated = -hp / 2;
+        maxhp = hp;
+        if (this.gameObject.tag == "Player")
+            hittedSound = this.transform.GetChild(8).GetComponent<AudioSource>();
+        else hittedSound = this.transform.GetChild(7).GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -67,12 +106,11 @@ public class DestroyAirplane : MonoBehaviour
     {
         if (destroyed)
         {
-            input.throttle = -100;
             DestroyLifeTime -= Time.deltaTime;
             delayExpl++;
-            if(delayExpl>=50)
+            if(delayExpl>=25)
             {
-                GameObject go = Instantiate(objPrefab) as GameObject;
+                GameObject go = Instantiate(objPrefab2) as GameObject;
                 go.transform.position = this.transform.position;
                 delayExpl = 0;
             }

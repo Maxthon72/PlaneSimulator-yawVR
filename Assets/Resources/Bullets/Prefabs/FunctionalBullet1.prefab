@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 8251530322853690154}
   - component: {fileID: 8399041815290302653}
   - component: {fileID: -9039268477274387150}
+  - component: {fileID: 5656562031537483032}
   m_Layer: 0
   m_Name: FunctionalBullet1
   m_TagString: Bullet
@@ -236,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 4385553982146353777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 332.3849, y: 106.51, z: 497.42987}
-  m_LocalScale: {x: 21.121172, y: 21.121172, z: 21.121172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7793270555551481105}
@@ -454,3 +455,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5656562031537483032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385553982146353777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0698b70069eb51e4e88703b57bb5869a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 20
+  speedMultiplier: 1
+  gravity: 0
+  gravityVal: 0.01
+  velocity: 6
+  bulletSize: 2
+  trailSize: 0.5
+  trailFirelive: 0.2
+  trailSmokelive: 0.5
+  bulletLife: 10
+  direction: {x: 0, y: 0, z: 0}
+  Gun: {fileID: 0}

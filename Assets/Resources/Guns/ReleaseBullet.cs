@@ -12,114 +12,21 @@ using Vector3 = UnityEngine.Vector3;
 
 public class ReleaseBullet : MonoBehaviour
 {
-    public class Bullet : MonoBehaviour
-    {
-        float velocity;
-        float mm;
-        float trail;
-        float tFirelive;
-        float tSmokelive;
-        GameObject bullet;
-        Vector3 direction;
-        Vector3 initdir;
-
-        float bulletLife;
-        float bulletLifeLess;
-
-        void SetTrail()
-        {
-            bullet.GetComponent<TrailRenderer>().widthMultiplier = bullet.transform.localScale.y * trail;
-            bullet.transform.GetChild(0).GetComponent<TrailRenderer>().widthMultiplier = bullet.transform.localScale.y * trail;
-
-            bullet.GetComponent<TrailRenderer>().time *= tFirelive;
-            bullet.transform.GetChild(0).GetComponent<TrailRenderer>().time *= tSmokelive;
-        }
-
-        public void Init(float vel, float m, float _trail, float _tFirelive, float _tSmokelive, float _bulletLife, GameObject preFab, Vector3 initd)
-        {
-            velocity = vel;
-            mm = m/2;
-            initdir = initd;
-            trail = _trail/15;
-            tSmokelive = _tSmokelive;
-            tFirelive = _tFirelive;
-            bulletLife = _bulletLife;
-
-            bulletLifeLess = bulletLife;
-            
-            bullet = Instantiate(preFab) as GameObject;
-            //collision
-            BoxCollider col = bullet.GetComponent<BoxCollider>();
-            float zOff = -velocity / mm;
-            col.size = new Vector3(col.size.x, col.size.y, col.size.z - zOff);
-            col.center = new Vector3(col.center.x, col.center.y, col.center.z+zOff/2);
-
-            bullet.transform.localScale = new Vector3(mm, mm, mm);
-            SetTrail();
-
-            bullet.transform.Rotate(this.transform.rotation.eulerAngles, Space.Self);
-            bullet.transform.Rotate(180, 90, 0, Space.Self);
-            // bullet.transform.Rotate(this.transform.rotation.eulerAngles);
-            bullet.transform.position = gameObject.transform.GetChild(0).transform.position;
-            direction = this.transform.rotation * initdir;
-            direction *= velocity;
-
-        }
-
-        public void Set(GameObject preFab)
-        {
-            bulletLifeLess = bulletLife;
-            bullet = Instantiate(preFab) as GameObject;
-
-            //collision
-            BoxCollider col = bullet.GetComponent<BoxCollider>();
-            float zOff = -velocity / mm;
-            col.size = new Vector3(col.size.x, col.size.y, col.size.z - zOff);
-            col.center = new Vector3(col.center.x, col.center.y, col.center.z + zOff / 2);
-
-            //bullet.transform.rotation = Quaternion.identity;
-            bullet.transform.localScale = new Vector3(mm, mm, mm);
-            SetTrail();
-
-            bullet.transform.Rotate(this.transform.rotation.eulerAngles, Space.Self);
-            bullet.transform.Rotate(180, 90, 0, Space.Self);
-            // bullet.transform.Rotate(this.transform.rotation.eulerAngles);
-            bullet.transform.position = gameObject.transform.GetChild(0).transform.position;
-            direction = this.transform.rotation * initdir;
-            direction *= velocity;
-        }
-
-        public void bulletMove()
-        {
-            if(!bullet.IsDestroyed())
-            {
-                if (bulletLifeLess < 0)
-                    Destroy(bullet.gameObject);
-                else
-                {
-                    bullet.transform.Translate(direction, Space.World);
-                    bulletLifeLess -= Time.deltaTime;
-                }
-            }
-        }
-    }
-    
-    public SetGun scriptSet;
-
-    
-    Vector3 initvalue = new Vector3(-1, 0, 0);
-
-    public GunShot script;
-    List<Bullet> bullets = new List<Bullet>();
-    GameObject objPrefab;
+    SetGun scriptSet;
+    GunShot script;
+    List<GameObject> bullets = new List<GameObject>();
+    GameObject bullletPrefab;
+    GameObject bullet;
     
     //MyBullet.Length; bulletlimit
     int bulletNum = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        objPrefab = Resources.Load("Bullets/FunctionalBullet1") as GameObject;
+        scriptSet = this.gameObject.GetComponent<SetGun>();
+        script = this.gameObject.GetComponent<GunShot>();
+        bullletPrefab = scriptSet.bullletPrefab;
     }
 
     // Update is called once per frame
@@ -135,13 +42,23 @@ public class ReleaseBullet : MonoBehaviour
 
             if (bullets.Count < scriptSet.maxBullettArray)
             {
-                Bullet NewBullet = gameObject.AddComponent<Bullet>();
-                NewBullet.Init(scriptSet.velocity, scriptSet.BulletSize, scriptSet.trailSize, scriptSet.fireTrailLive, scriptSet.smokeTrailLive, scriptSet.bulletLife, objPrefab, initvalue);
-                bullets.Add(NewBullet);
+                bullet = Instantiate(bullletPrefab) as GameObject;
+                bullet.GetComponent<SetBullet>().Gun = scriptSet;
+                bullet.transform.Rotate(transform.rotation.eulerAngles, Space.Self);
+                bullet.transform.Rotate(180, 90, 0, Space.Self);
+                bullet.transform.position = transform.GetChild(0).transform.position;
+                
+                bullets.Add(bullet);
             }
             else
             {
-                bullets[bulletNum].Set(objPrefab);
+                bullet = Instantiate(bullletPrefab) as GameObject;
+                bullet.GetComponent<SetBullet>().Gun = scriptSet;
+                bullet.transform.Rotate(transform.rotation.eulerAngles, Space.Self);
+                bullet.transform.Rotate(180, 90, 0, Space.Self);
+                bullet.transform.position = transform.GetChild(0).transform.position;
+
+                bullets[bulletNum] = bullet;
                 bulletNum++;
                 if (bulletNum > bullets.Count-1)
                 {
@@ -150,18 +67,6 @@ public class ReleaseBullet : MonoBehaviour
             }
 
             script.canShoot = false;
-            //script.shooted = false;
-        }
-
-        //direction = this.transform.rotation * initvalue;
-        //   direction = gameObject.transform.GetChild(0).transform.localPosition - gameObject.transform.GetChild(1).transform.localPosition;
-        //   direction = direction / direction.magnitude;
-        // direction = initvalue*velocity;
-        //direction *= velocity;
-
-        for (int i = 0; i < bullets.Count; i++)
-        {
-            bullets[i].bulletMove();
         }
     }
 }

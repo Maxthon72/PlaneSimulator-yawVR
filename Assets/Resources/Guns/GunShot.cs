@@ -17,11 +17,14 @@ public class GunShot : MonoBehaviour
     AudioSource shotSound;
     float animTime;
     float time;
-    public AiShoot AI;
+    AiShoot AI;
 
-    public SetGun scriptSet;
+    SetGun scriptSet;
     private void Start()
     {
+        AI = transform.parent.GetComponent<AiShoot>();
+        scriptSet = this.gameObject.GetComponent<SetGun>();
+
         anim = GetComponent<Animator>();
         shotSound = this.transform.GetChild(9).GetComponent<AudioSource>();
         shotSound.volume = scriptSet.soundVolume/100.0f;
@@ -32,7 +35,7 @@ public class GunShot : MonoBehaviour
     }
     void Update()
     {
-        if(scriptSet.isForAi)
+        if(AI.turnOnAi)
         {
             if (AI.shoot)
             {
@@ -42,7 +45,7 @@ public class GunShot : MonoBehaviour
         }
         else
         v = Input.GetKey(KeyCode.Space);
-
+       // v = true;
         if (v && !shooted)
         {
             time = animTime;

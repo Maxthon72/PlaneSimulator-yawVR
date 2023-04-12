@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AiShoot : MonoBehaviour
 {
-    Vector3 initdir = new Vector3(-1, 0, 0), vecdest, front;
+    public bool turnOnAi = false;
+    Vector3 initdir = new Vector3(0, 0, 1), vecdest, front;
     GameObject objective;
     [HideInInspector]
     public bool shoot = false;
@@ -19,14 +20,16 @@ public class AiShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vecdest = objective.transform.position - this.transform.position;
-        front = this.transform.rotation * initdir;
-    //    print(Mathf.Acos(Vector3.Dot(front, vecdest.normalized)) * 180 / Mathf.PI);
-        if (Mathf.Acos(Vector3.Dot(front, vecdest.normalized)) < 0.2) // <12 stopni x/vecdest.magnitude
+        if(turnOnAi)
         {
-            shoot = true;
+            vecdest = objective.transform.position - this.transform.position;
+            front = this.transform.rotation * initdir;
+            //    print(Mathf.Acos(Vector3.Dot(front, vecdest.normalized)) * 180 / Mathf.PI);
+            if (Mathf.Acos(Vector3.Dot(front, vecdest.normalized)) < 0.2) // <12 stopni x/vecdest.magnitude
+            {
+                shoot = true;
+            }
+            else shoot = false;
         }
-        else shoot = false;
-
     }
 }

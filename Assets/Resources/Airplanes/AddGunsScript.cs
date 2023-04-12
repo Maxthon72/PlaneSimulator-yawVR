@@ -14,16 +14,11 @@ public class Gun_MoveScript : MonoBehaviour
     public float z = 0;
     //GameObject boundedPlane;
     [Tooltip("interval size betweeen guns")]
-    public float gunOffset = 6;
+    public float gunOffset = 0.6f;
     [Tooltip("sum of all guns")]
     public List<GameObject> numberOfGuns;
 
-    [Tooltip("guns scale in x axis (from 1 wing to 2 wing)")]
-    public float scaleX = 10f;
-    [Tooltip("guns scale in y axis (under or above wing)")]
-    public float scaleY = 10f;
-    [Tooltip("guns scale in z axis (before or after wings)")]
-    public float scaleZ = 10f;
+    
     ///public float firerate = 2;
     [Tooltip("Prefab gun")]
     public GameObject Gun;
@@ -50,14 +45,10 @@ public class Gun_MoveScript : MonoBehaviour
        // y += -4.2f * (scale - 0.2f);
         //z
 
-        gunOffset *= 0.1f;
-
-        GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
         for (int i = 0; i < numberOfGuns.Count; i++)
         {
             GameObject go = Instantiate(Gun) as GameObject;
             go.transform.parent = this.gameObject.transform;
-            go.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
            /// go.GetComponent<Animator>().SetFloat("Speed", firerate);
             numberOfGuns[i] = go;
         }

@@ -254,6 +254,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5512603081535990987}
+    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8898231752384895831}
   m_SourcePrefab: {fileID: 100100000, guid: 36c262abfaa896d42a13deb3cccf0b62, type: 3}
 --- !u!1 &7656570434479824570 stripped
 GameObject:
@@ -282,7 +286,7 @@ MonoBehaviour:
   scaleX: 5
   scaleY: 5
   scaleZ: 5
-  Gun: {fileID: 172058860194480332, guid: 467ef20bb2c4e624196783e893660313, type: 3}
+  Gun: {fileID: 3549844752441692913, guid: b3fd2586ceb97bb4cb76117589a34167, type: 3}
 --- !u!114 &5177549319776469682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,3 +451,17 @@ MonoBehaviour:
   maxhp: 0
   bulletdamage: 20
   destroyed: 0
+--- !u!114 &8898231752384895831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656570434479824570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2861f54521d69148ae3e89a11ab9fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOnAi: 1
+  shoot: 0

@@ -260,15 +260,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firerate: 10
-  velocity: 8
-  BulletSize: 8
-  trailSize: 1
-  fireTrailLive: 0.4
-  smokeTrailLive: 0.04
-  maxBullettArray: 100
-  bulletLife: 10
+  maxBullettArray: 10
   soundVolume: 15
-  isForAi: 0
+  scaleX: 7.5
+  scaleY: 5
+  scaleZ: 5
+  bullletPrefab: {fileID: 4385553982146353777, guid: ad695da548f48c1479d0a630c3a1b9b1,
+    type: 3}
 --- !u!95 &8617090680820980535
 Animator:
   serializedVersion: 5
@@ -304,8 +302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   shooted: 0
-  AI: {fileID: 0}
-  scriptSet: {fileID: 8920207003558142788}
 --- !u!114 &1160134212992321921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,8 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7eac89f30f23445939e00c4a294230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptSet: {fileID: 8920207003558142788}
-  script: {fileID: -4843126695885213829}
 --- !u!4 &4181667373253789771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d8f4c38e2d2414429208b2db4c52fff,

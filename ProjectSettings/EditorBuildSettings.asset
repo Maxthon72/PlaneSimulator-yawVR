@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SimpleAirplaneController/ExampleScene.unity
     guid: 14866ae5492e87a4bb7e6e126b1ed1c5
+  - enabled: 1
+    path: Assets/Scenes/FreePlayMode.unity
+    guid: 797ea904b3fa8964eb32f8360a2c3cfd
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode.unity
+    guid: bf3c767a4da780a498d56e2048df5889
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

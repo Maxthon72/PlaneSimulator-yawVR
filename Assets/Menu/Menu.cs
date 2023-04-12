@@ -8,7 +8,12 @@ public class Menu : MonoBehaviour
 {
    public void playFreePlayMode()
     {
-        SceneManager.LoadScene("ExampleScene");
+        SceneManager.LoadScene("FreePlayMode");
+    }
+
+    public void playArcadeMode()
+    {
+        SceneManager.LoadScene("ArcadeMode");
     }
 
     public void exitGame()

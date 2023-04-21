@@ -19,9 +19,12 @@ public class GunShot : MonoBehaviour
     float time;
     AiShoot AI;
 
+    KeyCode keyShoot;
+
     SetGun scriptSet;
     private void Start()
     {
+        keyShoot = this.GetComponentInParent<SetPlane>().shoot;
         AI = transform.parent.GetComponent<AiShoot>();
         scriptSet = this.gameObject.GetComponent<SetGun>();
 
@@ -44,7 +47,7 @@ public class GunShot : MonoBehaviour
             else v = false;
         }
         else
-        v = Input.GetKey(KeyCode.Space);
+        v = Input.GetKey(keyShoot);
        // v = true;
         if (v && !shooted)
         {

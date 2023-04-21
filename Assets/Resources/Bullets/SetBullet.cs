@@ -12,9 +12,9 @@ public class SetBullet : MonoBehaviour
     [Tooltip("Set damage for airplanes")]
     public int bulletDamage = 20;
     [Tooltip("Multipler, change everytime bullet moves")]
-    public float speedMultiplier = 1.0f;
-    public bool gravity;
-    public float gravityVal = 0.01f;
+    public float speedMultiplier = 0.9999f;
+    [Tooltip("Value which determines Y change")]
+    public float gravityMul = 0.001f;
     [Tooltip("Velocity of gun bullet, more velocity => faster bullet")]
     public float velocity = 6f;
     [Tooltip("Size of your bullet")]
@@ -27,12 +27,13 @@ public class SetBullet : MonoBehaviour
     public float trailSmokelive = 1;
     [Tooltip("Time in seconds after bullet will be destroyed")]
     public float bulletLife = 10;
+
     float bulletLifeLess;
 
     public Vector3 direction;
     [HideInInspector]
     public SetGun Gun = null;
-
+ //   int sec = 0;
     bool start = true;
     Vector3 initdir = new Vector3(-1, 0, 0);
     void Start()
@@ -48,6 +49,7 @@ public class SetBullet : MonoBehaviour
         transform.GetChild(0).GetComponent<TrailRenderer>().widthMultiplier = trailSize;
         GetComponent<TrailRenderer>().time = trailFirelive;
         transform.GetChild(0).GetComponent<TrailRenderer>().time = trailSmokelive;
+        transform.GetChild(0).GetComponent<TrailRenderer>().material.color = Color.red;
 
         direction *= velocity;
 
@@ -90,8 +92,10 @@ public class SetBullet : MonoBehaviour
                     GetComponent<BoxCollider>().enabled = true;
                     start = false;
                 }
-                    
-                // direction.y -= gravityVal;
+                direction.x *= speedMultiplier;
+                direction.z *= speedMultiplier;
+
+                direction.y -= gravityMul;
             }
         }
     }

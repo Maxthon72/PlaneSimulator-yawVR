@@ -133,8 +133,9 @@ namespace SimplePlaneController {
         void Start() {
             destroyed = this.GetComponent<DestroyAirplane>();
             objective = GameObject.FindGameObjectWithTag("Player");
-            if (this.gameObject == objective)
-                AI = false;
+            /*if (this.gameObject == objective)
+                AI = false;*/
+            AI = GetComponent<SetPlane>().AI;
             if (startingThrottle > 0.01f){
                 stickyThrottle = Mathf.Clamp01(startingThrottle);
             }

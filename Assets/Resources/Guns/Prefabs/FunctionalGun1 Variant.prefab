@@ -262,7 +262,7 @@ MonoBehaviour:
   firerate: 10
   maxBullettArray: 10
   soundVolume: 15
-  scaleX: 7.5
+  scaleX: 5
   scaleY: 5
   scaleZ: 5
   bullletPrefab: {fileID: 4385553982146353777, guid: ad695da548f48c1479d0a630c3a1b9b1,

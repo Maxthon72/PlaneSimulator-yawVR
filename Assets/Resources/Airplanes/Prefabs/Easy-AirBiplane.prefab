@@ -236,7 +236,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
-      insertIndex: 5
+      insertIndex: 1
+      addedObject: {fileID: 2447272695303205764}
+    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      insertIndex: 2
       addedObject: {fileID: 4533791863255564390}
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
@@ -265,6 +269,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2370623685746829476}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2447272695303205764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656570434479824570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c64fad9f8d4e744686baa749b490886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: 0
+  DestroyLifeTime: 40
+  hp: 80
+  delayExpl: 50
+  AI: 1
+  turnOnShootAi: 1
 --- !u!114 &4533791863255564390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,12 +302,9 @@ MonoBehaviour:
   x: 2.73
   y: 0.8835
   z: 0
-  gunOffset: 6
+  gunOffset: 1
   numberOfGuns:
   - {fileID: 0}
-  scaleX: 5
-  scaleY: 5
-  scaleZ: 5
   Gun: {fileID: 3549844752441692913, guid: b3fd2586ceb97bb4cb76117589a34167, type: 3}
 --- !u!114 &5177549319776469682
 MonoBehaviour:
@@ -446,10 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b18d728c3547e143bd92656802e4ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyLifeTime: 40
-  hp: 80
-  maxhp: 0
-  bulletdamage: 20
   destroyed: 0
 --- !u!114 &8898231752384895831
 MonoBehaviour:

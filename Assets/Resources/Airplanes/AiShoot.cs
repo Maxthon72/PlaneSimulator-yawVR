@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AiShoot : MonoBehaviour
 {
-    public bool turnOnAi = false;
+    [HideInInspector]
+    public bool turnOnAi;
     Vector3 initdir = new Vector3(0, 0, 1), vecdest, front;
     GameObject objective;
     [HideInInspector]
@@ -14,6 +15,7 @@ public class AiShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        turnOnAi = GetComponent<SetPlane>().turnOnShootAi;
         objective = GameObject.FindGameObjectWithTag("Player");
     }
 

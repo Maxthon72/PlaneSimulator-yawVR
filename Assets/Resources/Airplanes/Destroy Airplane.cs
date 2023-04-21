@@ -7,14 +7,14 @@ using UnityEngine;
 
 public class DestroyAirplane : MonoBehaviour
 {
-    public float DestroyLifeTime = 40;
-    public int hp = 100, maxhp;
-    public int bulletdamage = 20;
+    float DestroyLifeTime;
+    int hp;
+    int delayExpl;
 
+    [HideInInspector]
     public bool destroyed = false;
     GameObject objPrefab, objPrefab2;
-    int delayExpl = 50;
-    int massacrated;
+    int massacrated, maxhp;
     bool notMassacre = true;
     AudioSource hittedSound;
 
@@ -31,8 +31,8 @@ public class DestroyAirplane : MonoBehaviour
                 GameObject go = Instantiate(objPrefab) as GameObject;
                 go.transform.position = this.transform.position;
             }
-                
-            hp -= bulletdamage;
+
+            hp -= other.GetComponent<SetBullet>().bulletDamage;
             if (hp <= 0)
             {
                 if (this.gameObject.tag == "Player")
@@ -92,6 +92,11 @@ public class DestroyAirplane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var setPlane = this.GetComponent<SetPlane>();
+        DestroyLifeTime = setPlane.DestroyLifeTime;
+        hp = setPlane.hp;
+        delayExpl = setPlane.delayExpl;
+
         objPrefab = Resources.Load("Explosions/Functional Explosion") as GameObject;
         objPrefab2 = Resources.Load("Explosions/Functional Explosion2") as GameObject;
         massacrated = -hp / 2;

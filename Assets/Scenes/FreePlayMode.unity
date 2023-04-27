@@ -422,8 +422,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.0009541537, y: 1.4585221e-19, z: 0.0000000023316298,
-    w: 9.23194e-40}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 7e-45, w: 2.539e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1570,7 +1569,7 @@ MonoBehaviour:
   delayExpl: 50
   AI: 0
   turnOnShootAi: 0
---- !u!114 &1202546687
+--- !u!114 &1202546692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1579,7 +1578,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1202546660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913647f33e4c8c64faa199d905d54e36, type: 3}
+  m_Script: {fileID: 11500000, guid: 094f80d94e1cff243958fa06bff83815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   throttle: 0
@@ -1618,6 +1617,7 @@ MonoBehaviour:
   engineCutoffAxes: Airplane Engine Cutoff Toggle
   lightToggleAxes: Airplane Light Toggle
   langingGearToggleAxes: Airplane Gear Toggle
+  controller: 1
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,8 +2699,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: -0.033540558, y: 0.908335, z: 0.074290656, w: 0.41022387}
-  m_LocalPosition: {x: 364.22696, y: 70.976494, z: 503.22253}
+  m_LocalRotation: {x: -0.14390363, y: 0.8535478, z: 0.38794985, w: 0.3166114}
+  m_LocalPosition: {x: 380.62305, y: 3.6103504, z: 509.35434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2926,7 +2926,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1202546687}
+      addedObject: {fileID: 1202546692}
   m_SourcePrefab: {fileID: 100100000, guid: 36c262abfaa896d42a13deb3cccf0b62, type: 3}
 --- !u!1001 &6953552092295742181
 PrefabInstance:

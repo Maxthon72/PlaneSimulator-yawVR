@@ -77,7 +77,7 @@ Plane simulator created in unity. Simulator can be controlled fully with keybord
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!--
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -89,10 +89,10 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![Unity][Unity.com]][Unity-url]
+* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 
 
 <!-- GETTING STARTED -->

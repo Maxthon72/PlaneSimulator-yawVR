@@ -64,5 +64,25 @@ namespace SimplePlaneController
                 return false;
             }
         }
+
+        protected float ApplyAxisInput(float axisValue, KeyCode positiveKey, KeyCode negativeKey){
+            if(Input.GetKey(positiveKey)){
+                axisValue += inputSensitivity;
+            } else if(Input.GetKey(negativeKey)){
+                axisValue -= inputSensitivity;
+            } else {
+                //Normalize to 0
+                if(axisValue > inputSensitivity){
+                    axisValue -= inputSensitivity;
+                } else if(axisValue < -inputSensitivity) {
+                    axisValue += inputSensitivity;
+                } else {
+                    axisValue = 0f;
+                }
+            }
+
+            axisValue = Mathf.Clamp(axisValue, -1f, 1f);
+            return axisValue;
+        }
     }
 }

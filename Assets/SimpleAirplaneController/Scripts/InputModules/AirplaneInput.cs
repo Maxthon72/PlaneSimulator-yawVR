@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
@@ -44,6 +45,7 @@ namespace SimplePlaneController {
         public KeyCode engineCutoffKey = KeyCode.K;
         public KeyCode lightToggleKey = KeyCode.L;
         public KeyCode langingGearToggleKey = KeyCode.Q;
+
 
         DestroyAirplane destroyed;
         //AI
@@ -150,6 +152,7 @@ namespace SimplePlaneController {
             //front = this.transform.rotation * frontvec;
             up = this.transform.rotation * upvec;
             down = this.transform.rotation * downvec;
+
             left = this.transform.rotation * leftvec;
             right = this.transform.rotation * rightvec;
         }
@@ -189,7 +192,7 @@ namespace SimplePlaneController {
                         bleft = true;
                     }
                 }
-                
+
                 //3500 3000 3000
                 /*if (true)//jezeli odleglosc na x zbyt mala, to dopasuj rotacje
                 {
@@ -220,9 +223,9 @@ namespace SimplePlaneController {
                     }
                 }*/
 
-                
+
                 //print("up:" + bup + " down:" + bdown);
-               // print("up:" + up + " down:" + down);
+                // print("up:" + up + " down:" + down);
 
                 /*if (veccur.y > vecdest.y)
                 {
@@ -246,7 +249,7 @@ namespace SimplePlaneController {
 
                 pitch = ApplyAxisInputAI(pitch, bdown, bup);
                 roll = ApplyAxisInputAI(roll, bleft, bright);
-              //  yaw = ApplyAxisInputAI(yaw, left, right);
+                //  yaw = ApplyAxisInputAI(yaw, left, right);
 
                 throttle = ApplyAxisInputAI(throttle, false, destroyed.destroyed);
                 ApplyStickyThrottle();
@@ -315,6 +318,7 @@ namespace SimplePlaneController {
 
                 ApplyAutoBrake();
             }
+            
 
         }
 

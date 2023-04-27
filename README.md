@@ -195,7 +195,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+We want to list a few resources we found helpful and would like to give credit to.
 
 * [README template](https://github.com/othneildrew/Best-README-Template)
 * [shields.io](https://shields.io/)

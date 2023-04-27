@@ -17,12 +17,12 @@ namespace SimplePlaneController
         public string engineCutoffAxes = "Airplane Engine Cutoff Toggle";
         public string lightToggleAxes = "Airplane Light Toggle";
         public string langingGearToggleAxes = "Airplane Gear Toggle";
-        public bool controller = true;
+        public static bool controlls;
 
 
         public override void GetInput()
         {
-            if (controller)
+            if (controlls)
             {
                 pitch = EvaluateAxes(pitchAxes);
                 roll = EvaluateAxes(rollAxes);

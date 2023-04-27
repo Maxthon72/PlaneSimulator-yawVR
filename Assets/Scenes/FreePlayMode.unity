@@ -422,7 +422,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 7e-45, w: 2.539e-42}
+  m_BoundingSphereOverride: {x: 5.42699e-19, y: 8.736996e-15, z: 0.000000002592408,
+    w: 3.049315e-35}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1617,7 +1618,7 @@ MonoBehaviour:
   engineCutoffAxes: Airplane Engine Cutoff Toggle
   lightToggleAxes: Airplane Light Toggle
   langingGearToggleAxes: Airplane Gear Toggle
-  controller: 1
+  controller: 0
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0

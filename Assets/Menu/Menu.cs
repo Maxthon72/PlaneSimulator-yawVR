@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-   public void playFreePlayMode()
+
+    public void playFreePlayMode()
     {
         SceneManager.LoadScene("FreePlayMode");
     }
@@ -18,6 +19,9 @@ public class Menu : MonoBehaviour
 
     public void exitGame()
     {
+
         Application.Quit();
     }
+
+
 }

@@ -422,7 +422,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 8.310572e+30, z: 8.88e-43, w: 1.01033896e+31}
+  m_BoundingSphereOverride: {x: 3.56e-43, y: 1e-45, z: 4.6e-44, w: 3.6360256e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1771,10 +1771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b18d728c3547e143bd92656802e4ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyLifeTime: 40
-  hp: 150
-  maxhp: 0
-  bulletdamage: 20
   destroyed: 0
 --- !u!114 &1202546681
 MonoBehaviour:
@@ -1790,6 +1786,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnOnAi: 0
   shoot: 0
+--- !u!114 &1202546686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202546660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c64fad9f8d4e744686baa749b490886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: 0
+  DestroyLifeTime: 40
+  hp: 100
+  delayExpl: 50
+  AI: 0
+  turnOnShootAi: 0
 --- !u!1 &1237095645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,8 +2973,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: 0.4028482, y: 0.100445606, z: 0.04453239, w: -0.90864784}
-  m_LocalPosition: {x: 417.5515, y: -909.65985, z: 315.7316}
+  m_LocalRotation: {x: -0.14390363, y: 0.8535478, z: 0.38794985, w: 0.3166114}
+  m_LocalPosition: {x: 380.62305, y: 3.6103504, z: 509.35434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3333,6 +3347,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1202546681}
+    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1202546686}
   m_SourcePrefab: {fileID: 100100000, guid: 36c262abfaa896d42a13deb3cccf0b62, type: 3}
 --- !u!1001 &6953552092295742181
 PrefabInstance:

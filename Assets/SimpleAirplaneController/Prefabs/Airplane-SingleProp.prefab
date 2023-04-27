@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18cc2e43fcb0e94293a497492bdac3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 5379478909106304531}
+  input: {fileID: 0}
   lightState: 1
   lights:
   - {fileID: 18849638}
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df02c338eeb9949995c3a2d102fe24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 5379478909106304531}
+  input: {fileID: 0}
   cameras:
   - {fileID: 0}
   - {fileID: 5379478908229082860}
@@ -3547,7 +3547,6 @@ GameObject:
   - component: {fileID: 5379478909106304533}
   - component: {fileID: 5379478909106304532}
   - component: {fileID: 5379478909106304543}
-  - component: {fileID: 5379478909106304531}
   - component: {fileID: 5379478909106304530}
   - component: {fileID: 5379478909106304529}
   m_Layer: 0
@@ -3708,44 +3707,6 @@ MonoBehaviour:
   - {fileID: 5379478907455888456}
   - {fileID: 5379478907643758165}
   - {fileID: 5379478908130030622}
---- !u!114 &5379478909106304531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379478909106304542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd9e499c280b03142b85beb304955223, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throttle: 0
-  maxFlaps: 3
-  inputSensitivity: 0.343
-  throttleStepSize: 0.1
-  startingThrottle: 0
-  autoBrake: 0
-  pitchUpKey: 119
-  pitchDownKey: 115
-  rollLeftKey: 97
-  rollRightKey: 100
-  yawLeftKey: 122
-  yawRightKey: 120
-  throttleUpKey: 304
-  throttleDownKey: 306
-  flapsDownKey: 102
-  flapsUpKey: 103
-  brakeKey: 32
-  cameraSwitchKey: 99
-  engineCutoffKey: 107
-  lightToggleKey: 108
-  langingGearToggleKey: 113
-  AI: 1
-  bleft: 0
-  bright: 0
-  bup: 0
-  bdown: 0
 --- !u!54 &5379478909106304530
 Rigidbody:
   m_ObjectHideFlags: 0

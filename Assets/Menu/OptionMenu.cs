@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Diagnostics;
 
 public class OptionMenu : MonoBehaviour
 {
@@ -12,7 +13,21 @@ public class OptionMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controlls = 0;
+        //checking if playerPref controlls already exist
+        if (PlayerPrefs.HasKey("Controlls"))
+        {
+            // HighScore PlayerPref already exists
+            controlls = PlayerPrefs.GetInt("Controlls");
+
+        }
+        else
+        {
+            // HighScore PlayerPref does not exist
+            controlls = 0;
+            PlayerPrefs.SetInt("Controlls", controlls);
+
+        }
+
         controllsOptionText = controllsOption.GetComponent<TextMeshProUGUI>();
     }
 
@@ -23,11 +38,11 @@ public class OptionMenu : MonoBehaviour
         {
 
             controllsOptionText.text = "controller";
-            UnityEngine.Debug.Log(controlls);
+
         }
         else if(controlls==0)
         {
-            UnityEngine.Debug.Log(controlls);
+
             controllsOptionText.text = "keyboard";
         }
     }
@@ -39,12 +54,14 @@ public class OptionMenu : MonoBehaviour
             controlls = 0;
             controllsOptionText.text = "keyboard";
             PlayerPrefs.SetInt("Controlls", controlls);
+            PlayerPrefs.Save();
         }
         else if (controlls == 0)
         {
             controlls = 1;
             controllsOptionText.text = "controller";
             PlayerPrefs.SetInt("Controlls", controlls);
+            PlayerPrefs.Save();
         }
     }
 
@@ -55,12 +72,14 @@ public class OptionMenu : MonoBehaviour
             controlls = 0;
             controllsOptionText.text = "keyboard";
             PlayerPrefs.SetInt("Controlls", controlls);
+            PlayerPrefs.Save();
         }
         else if (controlls == 0)
         {
             controlls = 1;
             controllsOptionText.text = "controller";
             PlayerPrefs.SetInt("Controlls", controlls);
+            PlayerPrefs.Save();
         }
     }
 }

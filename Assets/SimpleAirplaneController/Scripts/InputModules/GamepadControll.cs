@@ -17,12 +17,18 @@ namespace SimplePlaneController
         public string engineCutoffAxes = "Airplane Engine Cutoff Toggle";
         public string lightToggleAxes = "Airplane Light Toggle";
         public string langingGearToggleAxes = "Airplane Gear Toggle";
-        public static bool controlls;
+        int controlls;
 
+
+        void start()
+        {
+            
+        }
 
         public override void GetInput()
         {
-            if (controlls)
+            controlls = PlayerPrefs.GetInt("Controlls");
+            if (controlls==1)
             {
                 pitch = EvaluateAxes(pitchAxes);
                 roll = EvaluateAxes(rollAxes);
@@ -51,7 +57,7 @@ namespace SimplePlaneController
 
                 ApplyAutoBrake();
             }
-            else
+            else if(controlls==0)
             {
                 pitch = ApplyAxisInput(pitch, pitchUpKey, pitchDownKey);
                 roll = ApplyAxisInput(roll, rollLeftKey, rollRightKey);

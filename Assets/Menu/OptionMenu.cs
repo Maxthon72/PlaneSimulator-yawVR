@@ -7,25 +7,25 @@ using TMPro;
 public class OptionMenu : MonoBehaviour
 {
     public GameObject controllsOption;
-    bool controlls;
+    public static int controlls = 0;
     TextMeshProUGUI controllsOptionText;
     // Start is called before the first frame update
     void Start()
     {
-        controlls = false;
+        controlls = 0;
         controllsOptionText = controllsOption.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (controlls)
+        if (controlls==1)
         {
 
             controllsOptionText.text = "controller";
             UnityEngine.Debug.Log(controlls);
         }
-        else
+        else if(controlls==0)
         {
             UnityEngine.Debug.Log(controlls);
             controllsOptionText.text = "keyboard";
@@ -34,29 +34,33 @@ public class OptionMenu : MonoBehaviour
 
     public void nextControlls()
     {
-        if(controlls)
+        if (controlls == 1)
         {
-            controlls = false;
+            controlls = 0;
             controllsOptionText.text = "keyboard";
+            PlayerPrefs.SetInt("Controlls", controlls);
         }
-        else
+        else if (controlls == 0)
         {
-            controlls = true;
+            controlls = 1;
             controllsOptionText.text = "controller";
+            PlayerPrefs.SetInt("Controlls", controlls);
         }
     }
 
     public void previousControlls()
     {
-        if (controlls)
+        if (controlls == 1)
         {
-            controlls = false;
+            controlls = 0;
             controllsOptionText.text = "keyboard";
+            PlayerPrefs.SetInt("Controlls", controlls);
         }
-        else
+        else if (controlls == 0)
         {
-            controlls = true;
+            controlls = 1;
             controllsOptionText.text = "controller";
+            PlayerPrefs.SetInt("Controlls", controlls);
         }
     }
 }

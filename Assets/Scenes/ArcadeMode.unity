@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64fad9f8d4e744686baa749b490886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
+  shoot: 32
   DestroyLifeTime: 40
   hp: 100
   delayExpl: 50
@@ -2973,8 +2973,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
-  m_LocalRotation: {x: -0.14390363, y: 0.8535478, z: 0.38794985, w: 0.3166114}
-  m_LocalPosition: {x: 380.62305, y: 3.6103504, z: 509.35434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 564.803, y: 15.078461, z: -642.83685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,14 +243,14 @@ MonoBehaviour:
     y: 604
     width: 1397
     height: 343
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,9 +350,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 7a110000
       m_LastClickedID: 0
-      m_ExpandedIDs: 12faffff
+      m_ExpandedIDs: a6f7ffff12faffffa0660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -707,9 +707,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 574, y: 281, z: 0}
+    m_Target: {x: 452.0247, y: 315.80502, z: 4.5740423}
     speed: 2
-    m_Value: {x: 574, y: 281, z: 0}
+    m_Value: {x: 452.0247, y: 315.80502, z: 4.5740423}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -759,9 +759,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 639.09076
+    m_Target: 181.68588
     speed: 2
-    m_Value: 639.09076
+    m_Value: 181.68588
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1091,23 +1091,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/SimpleAirplaneController/Scripts/InputModules
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/SimpleAirplaneController/Scripts/InputModules
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Macie\Gliwice\gk\PlaneSimulator-yawVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 6}
-    m_SelectedIDs: ca650000
-    m_LastClickedID: 26058
-    m_ExpandedIDs: 00000000ce650000
+    scrollPos: {x: 0, y: 194}
+    m_SelectedIDs: cc710000
+    m_LastClickedID: 29132
+    m_ExpandedIDs: 00000000ce650000fc65000000660000c071000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000087b000000000000c8630000ac6c0000d0750000e2010000646f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

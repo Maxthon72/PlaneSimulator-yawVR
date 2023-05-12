@@ -1586,6 +1586,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1162313548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9010700729020777606, guid: 42c1474991ae8f248b8b16958c29b2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322433980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1162313549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162313548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9e499c280b03142b85beb304955223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throttle: 0
+  maxFlaps: 3
+  inputSensitivity: 0.1
+  throttleStepSize: 0.1
+  startingThrottle: 0
+  autoBrake: 0
+  pitchUpKey: 119
+  pitchDownKey: 115
+  rollLeftKey: 97
+  rollRightKey: 100
+  yawLeftKey: 122
+  yawRightKey: 120
+  throttleUpKey: 304
+  throttleDownKey: 306
+  flapsDownKey: 102
+  flapsUpKey: 103
+  brakeKey: 32
+  cameraSwitchKey: 99
+  engineCutoffKey: 107
+  lightToggleKey: 108
+  langingGearToggleKey: 113
+  AI: 1
+  bleft: 0
+  bright: 0
+  bup: 0
+  bdown: 0
+--- !u!114 &1162313550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162313548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c64fad9f8d4e744686baa749b490886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: 0
+  DestroyLifeTime: 40
+  hp: 100
+  delayExpl: 50
+  AI: 1
+  turnOnShootAi: 0
 --- !u!1 &1202546660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
@@ -2076,7 +2138,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9010700729020777606, guid: 42c1474991ae8f248b8b16958c29b2d6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162313550}
+    - targetCorrespondingSourceObject: {fileID: 9010700729020777606, guid: 42c1474991ae8f248b8b16958c29b2d6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162313549}
   m_SourcePrefab: {fileID: 100100000, guid: 42c1474991ae8f248b8b16958c29b2d6, type: 3}
 --- !u!1 &1371677613
 GameObject:
@@ -3023,7 +3093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963673619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 487.47668, y: -36.49979, z: -409.32254}
+  m_LocalPosition: {x: 622.25555, y: -20.517252, z: -740.42554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

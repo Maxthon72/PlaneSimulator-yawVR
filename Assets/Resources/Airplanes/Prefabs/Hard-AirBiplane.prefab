@@ -503,7 +503,7 @@ MonoBehaviour:
   maxFlaps: 3
   inputSensitivity: 0.1
   throttleStepSize: 0.1
-  startingThrottle: 0
+  startingThrottle: 1
   autoBrake: 0
   pitchUpKey: 119
   pitchDownKey: 115

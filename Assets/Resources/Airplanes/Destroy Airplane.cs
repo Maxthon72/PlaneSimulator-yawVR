@@ -37,8 +37,8 @@ public class DestroyAirplane : MonoBehaviour
             {
                 if (this.gameObject.tag == "Player")
                 {
-                    GetComponent<AirplaneInput>().AI = true;
-                    GetComponent<AirplaneInput>().bdown= true;
+                   // GetComponent<GamepadControllArcade>().AI = true;
+                    GetComponent<GamepadControllArcade>().lost= true;
                 }
 
                 destroyed = true;
@@ -123,6 +123,11 @@ public class DestroyAirplane : MonoBehaviour
             
             if (DestroyLifeTime < 0)
             {
+                if(this.gameObject.tag=="Player")
+                {
+                    print("Przegrales");
+                }
+                else
                 Destroy(this.gameObject);
             }
         }

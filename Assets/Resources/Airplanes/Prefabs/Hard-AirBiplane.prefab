@@ -265,10 +265,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3203462470074795196}
-    - targetCorrespondingSourceObject: {fileID: 5379478909106304542, guid: 36c262abfaa896d42a13deb3cccf0b62,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 394736091791806517}
   m_SourcePrefab: {fileID: 100100000, guid: 36c262abfaa896d42a13deb3cccf0b62, type: 3}
 --- !u!1 &9010700729020777606 stripped
@@ -491,24 +487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnOnAi: 1
   shoot: 0
---- !u!114 &-3203462470074795196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9010700729020777606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c64fad9f8d4e744686baa749b490886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shoot: 0
-  DestroyLifeTime: 40
-  hp: 100
-  delayExpl: 50
-  AI: 1
-  turnOnShootAi: 0
 --- !u!114 &394736091791806517
 MonoBehaviour:
   m_ObjectHideFlags: 0

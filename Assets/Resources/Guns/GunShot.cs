@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
 using static UnityEditor.Experimental.GraphView.GraphView;
-
+#endif
 public class GunShot : MonoBehaviour
 {
     bool v;

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor.Animations;
 using UnityEditor.Callbacks;
+#endif
 using UnityEngine;
 
 public class Gun_MoveScript : MonoBehaviour

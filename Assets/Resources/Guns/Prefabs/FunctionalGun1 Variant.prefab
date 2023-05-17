@@ -51,11 +51,11 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 650
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -63,23 +63,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.002
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -2.7669532
+      outSlope: -2.7669532
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.111446925
+    - serializedVersion: 3
+      time: 0.6937278
+      value: 0.12110901
+      inSlope: -0.5893235
+      outSlope: -0.5893235
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33460373
+      outWeight: 0.44526976
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.38478673
+      outSlope: -0.38478673
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.5185522
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -88,7 +97,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -261,10 +270,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firerate: 10
   maxBullettArray: 10
-  soundVolume: 15
   scaleX: 5
   scaleY: 5
   scaleZ: 5
+  maxVolume: 1
   bullletPrefab: {fileID: 4385553982146353777, guid: ad695da548f48c1479d0a630c3a1b9b1,
     type: 3}
 --- !u!95 &8617090680820980535

@@ -19,8 +19,11 @@ public class Gun_MoveScript : MonoBehaviour
     public float gunOffset = 0.6f;
     [Tooltip("sum of all guns")]
     public List<GameObject> numberOfGuns;
+    [Tooltip("Max gun volume")]
+    [Range(0.0f, 1.0f)]
+    public float GunmaxVolume = 1f;
 
-    
+
     ///public float firerate = 2;
     [Tooltip("Prefab gun")]
     public GameObject Gun;
@@ -47,10 +50,12 @@ public class Gun_MoveScript : MonoBehaviour
        // y += -4.2f * (scale - 0.2f);
         //z
 
+
         for (int i = 0; i < numberOfGuns.Count; i++)
         {
             GameObject go = Instantiate(Gun) as GameObject;
             go.transform.parent = this.gameObject.transform;
+            go.GetComponent<SetGun>().maxVolume = GunmaxVolume;
            /// go.GetComponent<Animator>().SetFloat("Speed", firerate);
             numberOfGuns[i] = go;
         }

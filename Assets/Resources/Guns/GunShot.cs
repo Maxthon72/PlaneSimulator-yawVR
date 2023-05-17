@@ -31,7 +31,7 @@ public class GunShot : MonoBehaviour
 
         anim = GetComponent<Animator>();
         shotSound = this.transform.GetChild(9).GetComponent<AudioSource>();
-        shotSound.volume = scriptSet.soundVolume/100.0f;
+        //shotSound.volume = scriptSet.soundVolume/100.0f;*/
 
        // GameObject objPrefab = Resources.Load("Guns/FunctionalGun1 Variant") as GameObject;
         // GameObject go = Instantiate(objPrefab) as GameObject;

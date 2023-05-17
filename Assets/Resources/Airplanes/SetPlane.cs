@@ -1,3 +1,4 @@
+using SimplePlaneController;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,11 +18,15 @@ public class SetPlane : MonoBehaviour
     public bool AI = false;
     [Tooltip("AI will shoot after this turned ON")]
     public bool turnOnShootAi = false;
+    [Tooltip("Max plane volume")]
+    [Range(0.0f, 1.0f)]
+    public float maxVolume = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //engine
+        this.transform.GetChild(2).GetComponent<AirplaneEngine>().maxVolume = maxVolume;
     }
 
     // Update is called once per frame

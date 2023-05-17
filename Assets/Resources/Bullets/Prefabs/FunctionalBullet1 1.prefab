@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18d89a4b1d2386c4798b78bb7cd4b23c, type: 2}
+  - {fileID: 2100000, guid: fbf04f285eb1f5e43a59501ead66c0bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: -9039268477274387150}
   - component: {fileID: 5656562031537483032}
   m_Layer: 0
-  m_Name: FunctionalBullet1
+  m_Name: FunctionalBullet1 1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18d89a4b1d2386c4798b78bb7cd4b23c, type: 2}
+  - {fileID: 2100000, guid: fbf04f285eb1f5e43a59501ead66c0bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0698b70069eb51e4e88703b57bb5869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 10
+  bulletDamage: 20
   speedMultiplier: 0.99999
   gravityMul: 0.001
   velocity: 3

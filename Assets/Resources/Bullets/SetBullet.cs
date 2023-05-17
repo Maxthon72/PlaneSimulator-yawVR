@@ -19,8 +19,10 @@ public class SetBullet : MonoBehaviour
     public float velocity = 6f;
     [Tooltip("Size of your bullet")]
     public float bulletSize = 1;
-    [Tooltip("Size of trail behind bullet")]
-    public float trailSize = 1;
+    [Tooltip("Size of Fire trail behind bullet")]
+    public float trailSizeFire = 1;
+    [Tooltip("Size of Smoke trail behind bullet")]
+    public float trailSizeSmoke = 1;
     [Tooltip("Time after Fire trail will dissapear")]
     public float trailFirelive = 1;
     [Tooltip("Time after Smoke trail will dissapear")]
@@ -45,11 +47,10 @@ public class SetBullet : MonoBehaviour
 
         bulletLifeLess = bulletLife;
 
-        GetComponent<TrailRenderer>().widthMultiplier = trailSize;
-        transform.GetChild(0).GetComponent<TrailRenderer>().widthMultiplier = trailSize;
+        GetComponent<TrailRenderer>().widthMultiplier = trailSizeFire;
+        transform.GetChild(0).GetComponent<TrailRenderer>().widthMultiplier = trailSizeSmoke;
         GetComponent<TrailRenderer>().time = trailFirelive;
         transform.GetChild(0).GetComponent<TrailRenderer>().time = trailSmokelive;
-        transform.GetChild(0).GetComponent<TrailRenderer>().material.color = Color.red;
 
         direction *= velocity;
 

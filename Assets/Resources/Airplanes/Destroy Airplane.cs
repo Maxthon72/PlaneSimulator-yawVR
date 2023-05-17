@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 #endif
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DestroyAirplane : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class DestroyAirplane : MonoBehaviour
     [HideInInspector]
     public bool destroyed = false;
     GameObject objPrefab, objPrefab2;
+
+    ParticleSystem trail;
+    float trailLifeTime;
+    float trailSize;
+    float trailRad;
+
     int massacrated, maxhp;
     bool notMassacre = true;
     AudioSource hittedSound;
@@ -31,7 +38,10 @@ public class DestroyAirplane : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 GameObject go = Instantiate(objPrefab) as GameObject;
-                go.transform.position = this.transform.position;
+                go.transform.position = other.transform.position;
+
+                go.transform.localScale = new Vector3(1000, 1000, 1000);
+               // go.transform.localScale *= other.GetComponent<SetBullet>().bulletSize;
             }
 
             hp -= other.GetComponent<SetBullet>().bulletDamage;
@@ -73,10 +83,17 @@ public class DestroyAirplane : MonoBehaviour
             //this.GetComponent<Animator>().Play("Destruction");
             if(notMassacre)
             {
-                int x = (maxhp - hp) / 20;
-                this.GetComponent<TrailRenderer>().enabled = true;
+                float x = 1 -  (float)hp / (float)maxhp;
+                trail.enableEmission = true;
+                trail.startLifetime = trailLifeTime * x;
+                trail.startSize = trailSize * x;
+             //   trail.shape.radius = 
+                var newShape = trail.shape;
+                newShape.radius = trailRad * x;
+                print(x);
+                /*this.GetComponent<TrailRenderer>().enabled = true;
                 this.GetComponent<TrailRenderer>().widthMultiplier = x;
-                this.GetComponent<TrailRenderer>().time = 5 + x/4;
+                this.GetComponent<TrailRenderer>().time = 5 + x/4;*/
             }
             
         }
@@ -106,6 +123,14 @@ public class DestroyAirplane : MonoBehaviour
         if (this.gameObject.tag == "Player")
             hittedSound = this.transform.GetChild(8).GetComponent<AudioSource>();
         else hittedSound = this.transform.GetChild(7).GetComponent<AudioSource>();
+
+        trail = GetComponent<ParticleSystem>();
+        trail.enableEmission = false;
+        trailLifeTime = trail.startLifetime;
+        trailSize = trail.startSize;
+        trailRad = trail.shape.radius;
+
+
     }
 
     // Update is called once per frame

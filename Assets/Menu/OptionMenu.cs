@@ -82,4 +82,9 @@ public class OptionMenu : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
+
+    public void volumeChange()
+    {
+
+    }
 }

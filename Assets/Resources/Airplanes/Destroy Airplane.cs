@@ -1,6 +1,7 @@
 using SimplePlaneController;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 #if UNITY_EDITOR
 using UnityEditor.Experimental.GraphView;
@@ -124,11 +125,15 @@ public class DestroyAirplane : MonoBehaviour
             hittedSound = this.transform.GetChild(8).GetComponent<AudioSource>();
         else hittedSound = this.transform.GetChild(7).GetComponent<AudioSource>();
 
-        trail = GetComponent<ParticleSystem>();
-        trail.enableEmission = false;
-        trailLifeTime = trail.startLifetime;
-        trailSize = trail.startSize;
-        trailRad = trail.shape.radius;
+        if (GetComponent<ParticleSystem>()!=null)
+        {
+            trail = GetComponent<ParticleSystem>();
+            trail.enableEmission = false;
+            trailLifeTime = trail.startLifetime;
+            trailSize = trail.startSize;
+            trailRad = trail.shape.radius;
+        }
+        
 
 
     }

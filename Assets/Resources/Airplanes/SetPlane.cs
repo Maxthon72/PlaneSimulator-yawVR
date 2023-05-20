@@ -26,7 +26,10 @@ public class SetPlane : MonoBehaviour
     void Start()
     {
         //engine
-        maxVolume = PlayerPrefs.GetFloat("Volume");
+        if (this.gameObject.tag == "Player")
+            maxVolume = PlayerPrefs.GetFloat("Volume") / 2;
+        else
+            maxVolume = PlayerPrefs.GetFloat("Volume");
         this.transform.GetChild(2).GetComponent<AirplaneEngine>().maxVolume = maxVolume;
     }
 

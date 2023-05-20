@@ -46,10 +46,10 @@ public class Gun_MoveScript : MonoBehaviour
             }
         }*/
 
-       // x += -11.7f * (scale - 0.2f);
-       // y += -4.2f * (scale - 0.2f);
+        // x += -11.7f * (scale - 0.2f);
+        // y += -4.2f * (scale - 0.2f);
         //z
-
+        GunmaxVolume = PlayerPrefs.GetFloat("Volume");
 
         for (int i = 0; i < numberOfGuns.Count; i++)
         {

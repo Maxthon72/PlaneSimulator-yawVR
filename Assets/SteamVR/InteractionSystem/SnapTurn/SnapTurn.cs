@@ -64,7 +64,9 @@ namespace Valve.VR.InteractionSystem
 
                 // only allow snap turning when not holding something
 
-                bool rightHandValid = player.rightHand.currentAttachedObject == null ||
+                //fix null object error
+
+                /*bool rightHandValid = player.rightHand.currentAttachedObject == null ||
                     (player.rightHand.currentAttachedObject != null
                     && player.rightHand.currentAttachedTeleportManager != null
                     && player.rightHand.currentAttachedTeleportManager.teleportAllowed);
@@ -88,7 +90,7 @@ namespace Valve.VR.InteractionSystem
                 else if (leftHandTurnRight || rightHandTurnRight)
                 {
                     RotatePlayer(snapAngle);
-                }
+                }*/
             }
         }
 

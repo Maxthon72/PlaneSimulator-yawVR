@@ -61,11 +61,11 @@ namespace Valve.VR.InteractionSystem
 
 
 		//-------------------------------------------------
-		// Get the number of active Hands.
+		// Get the number of active Hands. LOL
 		//-------------------------------------------------
 		public int handCount
 		{
-			get
+            get
 			{
 				int count = 0;
 				for ( int i = 0; i < hands.Length; i++ )
@@ -77,7 +77,7 @@ namespace Valve.VR.InteractionSystem
 				}
 				return count;
 			}
-		}
+        }
 
 
 		//-------------------------------------------------

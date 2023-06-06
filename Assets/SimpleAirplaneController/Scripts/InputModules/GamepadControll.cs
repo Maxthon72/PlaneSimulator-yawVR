@@ -23,7 +23,19 @@ namespace SimplePlaneController
 
         void start()
         {
-            
+            if (PlayerPrefs.HasKey("Controlls"))
+            {
+                // HighScore PlayerPref already exists
+                controlls = PlayerPrefs.GetInt("Controlls");
+
+            }
+            else
+            {
+                // HighScore PlayerPref does not exist
+                controlls = 1;
+                PlayerPrefs.SetInt("Controlls", controlls);
+
+            }
         }
 
         public override void GetInput()

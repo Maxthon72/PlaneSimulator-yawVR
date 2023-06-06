@@ -6,7 +6,7 @@ using UnityEngine;
 public class SetPlane : MonoBehaviour
 {
 
-    public KeyCode shoot;
+    public KeyCode shoot = KeyCode.Space;
     //destroyPlane
     [Tooltip("Time after plane will be released after being in fire mode")]
     public float DestroyLifeTime = 40;
@@ -21,6 +21,7 @@ public class SetPlane : MonoBehaviour
     [Tooltip("Max plane volume")]
     [Range(0.0f, 1.0f)]
     public float maxVolume = 1f;
+    int controlls;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +32,30 @@ public class SetPlane : MonoBehaviour
         else
             maxVolume = PlayerPrefs.GetFloat("Volume");
         this.transform.GetChild(2).GetComponent<AirplaneEngine>().maxVolume = maxVolume;
+
+        if (PlayerPrefs.HasKey("Controlls"))
+        {
+            // HighScore PlayerPref already exists
+            controlls = PlayerPrefs.GetInt("Controlls");
+
+        }
+        else
+        {
+            // HighScore PlayerPref does not exist
+            controlls = 1;
+            PlayerPrefs.SetInt("Controlls", controlls);
+
+        }
+        if (controlls == 1)
+        {
+            shoot = KeyCode.JoystickButton0;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

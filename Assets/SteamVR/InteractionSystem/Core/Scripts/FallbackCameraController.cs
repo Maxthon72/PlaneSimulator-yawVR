@@ -30,8 +30,8 @@ namespace Valve.VR.InteractionSystem
 
 		//-------------------------------------------------
 		void Update()
-		{
-			float forward = 0.0f;
+		{	//player movment using keybord
+			/*float forward = 0.0f;
 			if ( Input.GetKey( KeyCode.W ) || Input.GetKey( KeyCode.UpArrow ) )
 			{
 				forward += 1.0f;
@@ -77,17 +77,17 @@ namespace Valve.VR.InteractionSystem
 
 			Vector3 mousePosition = Input.mousePosition;
 
-			if ( Input.GetMouseButtonDown( 1 ) /* right mouse */)
+			if ( Input.GetMouseButtonDown( 1 ) *//* right mouse *//*)
 			{
 				startMousePosition = mousePosition;
 				startEulerAngles = transform.localEulerAngles;
 			}
 
-			if ( Input.GetMouseButton( 1 ) /* right mouse */)
+			if ( Input.GetMouseButton( 1 ) *//* right mouse *//*)
 			{
 				Vector3 offset = mousePosition - startMousePosition;
 				transform.localEulerAngles = startEulerAngles + new Vector3( -offset.y * 360.0f / Screen.height, offset.x * 360.0f / Screen.width, 0.0f );
-			}
+			}*/
 		}
 
 

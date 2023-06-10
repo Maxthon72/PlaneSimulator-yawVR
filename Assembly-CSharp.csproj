@@ -96,6 +96,7 @@
     <Compile Include="Assets\YawVR\Scripts\Pitch.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\FlatSphere.cs" />
     <Compile Include="Assets\Resources\Balloons\Destroy Balloon.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\MapDisplay.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneFuelTank.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\MazeGenerator.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneController.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\ProceduralFacadePanels.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\InputModules\AirplaneInputSimpleAI.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\TextureGenerator.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\Tetrahedron.cs" />
     <Compile Include="Assets\YawVR\Scripts\UI\RotationPanel.cs" />
     <Compile Include="Assets\Resources\Bullets\SetBullet.cs" />
@@ -176,6 +178,7 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Voronoi\VoronoiValleys.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneWheel.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Generator\Voroni\VoronoiPitsNode.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\YawVR\Scripts\ActionBus.cs" />
     <Compile Include="Assets\Terra\Source\Util\PoissonDiscSampler.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\RoofGenerator.cs" />
@@ -236,6 +239,7 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Displacement\Scale.cs" />
     <Compile Include="Assets\YawVR\Sample\LED\SimpleColor.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Modification\Bias.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\EndlessTerrain.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneLightManager.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneAerodynamics.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
@@ -297,6 +301,7 @@
     <Compile Include="Assets\YawVR\Sample\LED\Blinking.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Common\CameraRotator.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Patterns\Spheres.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\MeshGenerator.cs" />
     <Compile Include="Assets\YawVR\Scripts\ApplyRotationCenter.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\PTUtils.cs" />
     <Compile Include="Assets\Resources\Options.cs" />
@@ -312,6 +317,7 @@
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\NoiseGraph.cs" />
     <Compile Include="Assets\YawVR\Scripts\UI\SampleYawControllerDelegateImplementation.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\BuildingGenerator.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\Noise.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Patterns\TexturePattern.cs" />
     <Compile Include="Assets\YawVR\Scripts\yaw.cs" />
   </ItemGroup>

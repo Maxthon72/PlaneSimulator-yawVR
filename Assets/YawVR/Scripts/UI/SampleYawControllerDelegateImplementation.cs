@@ -74,7 +74,7 @@ namespace YawVR
             RefreshLayout(YawController.Instance().State);
            
             //Start seacrhing for devices
-            //StartCoroutine(SearchForDevices());
+            StartCoroutine(SearchForDevices());
         }
 
    

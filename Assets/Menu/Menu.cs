@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class Menu : MonoBehaviour
 {
-
+    public GameObject playButton;
+    public GameObject optionsButton;
+    public GameObject exitButton;
 
     public void playFreePlayMode()
-    {
-
-        
+    { 
         SceneManager.LoadScene("FreePlayMode");
     }
 
     public void playArcadeMode()
-    {
-        
+    {     
         SceneManager.LoadScene("ArcadeMode");
     }
 

@@ -580,6 +580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25f9321bd876674a87827dc28d0a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1 &511755406
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25f9321bd876674a87827dc28d0a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1 &581406024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25f9321bd876674a87827dc28d0a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!114 &677099664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,6 +1832,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25f9321bd876674a87827dc28d0a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!114 &985083173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3649,6 +3661,7 @@ GameObject:
   - component: {fileID: 1933998117}
   - component: {fileID: 1933998116}
   - component: {fileID: 1933998115}
+  - component: {fileID: 1933998119}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3695,7 +3708,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1933998117
 Canvas:
   m_ObjectHideFlags: 0
@@ -3705,7 +3718,7 @@ Canvas:
   m_GameObject: {fileID: 1933998114}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 1522970332}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3726,8 +3739,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933998114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.16248597, y: 0.16248597, z: 0.16248597}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 623234639}
@@ -3740,9 +3753,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 46, y: 1}
+  m_SizeDelta: {x: 1515.1427, y: 737.4286}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1933998119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933998114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 1733553804}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &1976262565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,6 +4193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25f9321bd876674a87827dc28d0a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 0}
+  optionsButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!224 &2048319470
 RectTransform:
   m_ObjectHideFlags: 0

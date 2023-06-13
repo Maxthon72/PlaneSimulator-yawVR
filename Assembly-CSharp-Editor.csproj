@@ -80,6 +80,7 @@
     <Compile Include="Assets\TerrainGen\Editor\MapGeneratorEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\ElementAdderMeta.cs" />
+    <Compile Include="Assets\TerrainGen\Editor\UpdatableDataEditor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInput_Editor.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\AddTextureWindow.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Editor\ScaleNodeEditor.cs" />

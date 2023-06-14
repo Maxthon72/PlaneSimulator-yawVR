@@ -77,7 +77,6 @@
     <Compile Include="Assets\Terra\Source\Editor\NoiseTreeView.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInputSimpleAI_Editor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInputDelegate_Editor.cs" />
-    <Compile Include="Assets\TerrainGen\Editor\MapGeneratorEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\ElementAdderMeta.cs" />
     <Compile Include="Assets\TerrainGen\Editor\UpdatableDataEditor.cs" />
@@ -106,6 +105,7 @@
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\IElementAdder.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorAssetModProcessor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorResources.cs" />
+    <Compile Include="Assets\TerrainGen\Editor\MapPreviewEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\ReorderableListFlags.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\IReorderableListAdaptor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Internal\ReorderableListResources.cs" />

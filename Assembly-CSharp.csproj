@@ -70,6 +70,7 @@
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneInformation.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Modification\Gain.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Draw.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\TerrainChunk.cs" />
     <Compile Include="Assets\Terra\Source\TerraSettings.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\RandomE.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\Maze.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Assets\YawVR\Scripts\Pitch.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\FlatSphere.cs" />
     <Compile Include="Assets\Resources\Balloons\Destroy Balloon.cs" />
-    <Compile Include="Assets\TerrainGen\Scripts\MapDisplay.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneFuelTank.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\MazeGenerator.cs" />
@@ -116,6 +116,7 @@
     <Compile Include="Assets\Terra\Source\TerrainPaint.cs" />
     <Compile Include="Assets\YawVR\Sample\ControlSamples\SimpleOrientationCopy.cs" />
     <Compile Include="Assets\YawVR\Scenes\Flying\Advanced\PlaceObjects.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\ThreadedDataRequester.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Combination\Max.cs" />
     <Compile Include="Assets\YawVR\Scripts\AirplaneVehicle.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneEngine.cs" />
@@ -179,7 +180,6 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Voronoi\VoronoiValleys.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneWheel.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Generator\Voroni\VoronoiPitsNode.cs" />
-    <Compile Include="Assets\TerrainGen\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\YawVR\Scripts\ActionBus.cs" />
     <Compile Include="Assets\Terra\Source\Util\PoissonDiscSampler.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\RoofGenerator.cs" />
@@ -187,6 +187,7 @@
     <Compile Include="Assets\Terra\Source\TerrainTile.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\ColorE.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Constant.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\MapPreview.cs" />
     <Compile Include="Assets\TerrainGen\Scripts\Data\MeshSettings.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneCameraManager.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Combination\Blend.cs" />
@@ -244,7 +245,6 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Displacement\Scale.cs" />
     <Compile Include="Assets\YawVR\Sample\LED\SimpleColor.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Modification\Bias.cs" />
-    <Compile Include="Assets\TerrainGen\Scripts\EndlessTerrain.cs" />
     <Compile Include="Assets\TerrainGen\Scripts\Data\TextureData.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneLightManager.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneAerodynamics.cs" />
@@ -261,6 +261,7 @@
     <Compile Include="Assets\YawVR\Scripts\YawDevice.cs" />
     <Compile Include="Assets\Resources\Balloons\genColorBalloon.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generator.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneLandingGear.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\InputModules\AirplaneInputAxes.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Generator\Voroni\AbsVoronoiNoiseNode.cs" />

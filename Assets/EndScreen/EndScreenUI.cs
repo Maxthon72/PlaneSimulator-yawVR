@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndScreenUI : MonoBehaviour
 {
@@ -16,23 +17,15 @@ public class EndScreenUI : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    // Update is called once per frame
-    /*void Update()
+    
+
+    public void ExitButton()
     {
-        if (endScreenManager != null)
-        {
-            bool isAirplaneDestroyed = endScreenManager.isEndGame;
+        SceneManager.LoadScene("Menu");
+    }
 
-            // Use the isAirplaneDestroyed variable to activate or modify the end screen UI
-            // based on the destruction state of the airplane
-        }
-    }*/
-
-    //public GameObject airplaneObject;
-   
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("ArcadeMode");
+    }
 }

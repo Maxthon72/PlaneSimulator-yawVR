@@ -28,6 +28,8 @@ public class DestroyAirplane : MonoBehaviour
     bool notMassacre = true;
     AudioSource hittedSound;
 
+    public bool displayEndScreen = false;
+
     private void OnTriggerEnter(Collider other)
     {
         
@@ -158,6 +160,7 @@ public class DestroyAirplane : MonoBehaviour
                 if(this.gameObject.tag=="Player")
                 {
                     print("Przegrales");
+                    displayEndScreen = true;
                 }
                 else
                 Destroy(this.gameObject);

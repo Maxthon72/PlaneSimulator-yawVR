@@ -13,8 +13,11 @@ public class Menu : MonoBehaviour
     public GameObject playButton;
     public GameObject optionsButton;
     public GameObject exitButton;
+    public GameObject mainMenu;
     public GameObject optionsMenu;
-    public GameObject levelMenu;
+    public GameObject gameModeMenu;
+    public GameObject freePlayModeButton;
+    public GameObject arcadeModeButton;
     public GameObject nextCotrollsButton;
     public static int controlls = 0;
     TextMeshProUGUI controllsOptionText;
@@ -23,15 +26,18 @@ public class Menu : MonoBehaviour
     public GameObject backFromOptionsButton;
     public GameObject volumeSlider;
     public GameObject controllsOption;
-
+    GameObject currentMenu;
     void Start()
     {
+        currentMenu = mainMenu;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(playButton);
     }
 
     public void openOptionsMenu()
     {
+        currentMenu.SetActive(false);
+        currentMenu = optionsMenu;
         optionsMenu.SetActive(true);
         controllsOptionText = controllsOption.GetComponent<TextMeshProUGUI>();
         //checking if playerPref controlls already exist
@@ -64,6 +70,25 @@ public class Menu : MonoBehaviour
         
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(nextCotrollsButton);
+    }
+
+    public void openGameModeMenu()
+    {
+        currentMenu?.SetActive(false);
+        currentMenu = gameModeMenu;
+        gameModeMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(freePlayModeButton);
+
+    }
+
+    public void openMainMenu()
+    {
+        currentMenu.SetActive(false);
+        currentMenu = mainMenu;
+        mainMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playButton);
     }
 
     public void playFreePlayMode()

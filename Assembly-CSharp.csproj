@@ -81,6 +81,7 @@
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\Icosahedron.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\ValueNoise2D.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Modifier\MinNode.cs" />
+    <Compile Include="Assets\EndScreen\EndScreenManager.cs" />
     <Compile Include="Assets\Resources\Guns\SetGun.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Value\IntNode.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\ArrayE.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\YawVR\Scripts\Pitch.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Primitives\FlatSphere.cs" />
     <Compile Include="Assets\Resources\Balloons\Destroy Balloon.cs" />
+    <Compile Include="Assets\EndScreen\EndScreenUI.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneFuelTank.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Mazes\MazeGenerator.cs" />

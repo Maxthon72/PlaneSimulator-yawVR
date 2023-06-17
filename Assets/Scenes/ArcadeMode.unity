@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8036,11 +8036,9 @@ MonoBehaviour:
   colliderLODIndex: 0
   detailLevels:
   - lod: 0
-    visibleDstThreshold: 0
-  - lod: 0
-    visibleDstThreshold: 0
-  - lod: 0
-    visibleDstThreshold: 0
+    visibleDstThreshold: 2000
+  - lod: 4
+    visibleDstThreshold: 4000
   meshSettings: {fileID: 11400000, guid: ed92e9f90bef29444a5953410f47b9da, type: 2}
   heightMapSettings: {fileID: 11400000, guid: 9612c25766fbde342b9c2e2a75d25b20, type: 2}
   textureSettings: {fileID: 11400000, guid: e15fd51509204e843857b227c958d4d0, type: 2}
@@ -8055,7 +8053,7 @@ Transform:
   m_GameObject: {fileID: 1451736519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -9983,21 +9981,46 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5379478907287215406, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
+      objectReference: {fileID: 0}
     - target: {fileID: 5379478907827894906, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       propertyPath: maxVolume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379478908187638382, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 5379478908229082858, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 5379478908229082860, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
+      objectReference: {fileID: 0}
     - target: {fileID: 5379478908478677778, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       propertyPath: cameras.Array.data[0]
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 5379478908488963415, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379478908533402052, guid: 36c262abfaa896d42a13deb3cccf0b62,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
+      objectReference: {fileID: 0}
     - target: {fileID: 5379478908712059814, guid: 36c262abfaa896d42a13deb3cccf0b62,
         type: 3}
       propertyPath: m_Pitch
@@ -10866,6 +10889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953552092148017333, guid: d7f03fd02453bb4419f126476758711f,
+        type: 3}
+      propertyPath: far clip plane
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 6953552092148017335, guid: d7f03fd02453bb4419f126476758711f,
         type: 3}

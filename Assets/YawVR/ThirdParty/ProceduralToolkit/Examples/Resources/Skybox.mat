@@ -2,42 +2,35 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Skybox
   m_Shader: {fileID: 4800000, guid: 0bfcf4c10b2626940ad26b7f045faf56, type: 3}
-  m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs: {}
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
     m_Floats:
-      data:
-        first:
-          name: _Intensity
-        second: 1
-      data:
-        first:
-          name: _Exponent1
-        second: 3
-      data:
-        first:
-          name: _Exponent2
-        second: 1
+    - _Exponent1: 1
+    - _Exponent2: 3
+    - _Intensity: 1
     m_Colors:
-      data:
-        first:
-          name: _GroundColor
-        second: {r: 0.75, g: 0.75, b: 0.75, a: 0}
-      data:
-        first:
-          name: _SkyColor
-        second: {r: 1, g: 1, b: 1, a: 0}
-      data:
-        first:
-          name: _HorizonColor
-        second: {r: 0.25, g: 0.25, b: 0.25, a: 0}
+    - _GroundColor: {r: 0.6039216, g: 0.78823537, b: 0.9058824, a: 1}
+    - _HorizonColor: {r: 0.7254902, g: 0.7294118, b: 0.7294118, a: 1}
+    - _SkyColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

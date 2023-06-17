@@ -2,33 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 using System.Diagnostics;
 
 public class OptionMenu : MonoBehaviour
 {
+    public GameObject nextCotrollsButton;
+    public GameObject previousControllsButton;
+    public GameObject exitButton;
+    public GameObject volumeSlider;
     public GameObject controllsOption;
-    public static int controlls = 0;
+    int controlls = 0;
+
+
     TextMeshProUGUI controllsOptionText;
     // Start is called before the first frame update
     void Start()
     {
-        //checking if playerPref controlls already exist
-        if (PlayerPrefs.HasKey("Controlls"))
-        {
-            // HighScore PlayerPref already exists
-            controlls = PlayerPrefs.GetInt("Controlls");
-
-        }
-        else
-        {
-            // HighScore PlayerPref does not exist
-            controlls = 0;
-            PlayerPrefs.SetInt("Controlls", controlls);
-
-        }
-
-        controllsOptionText = controllsOption.GetComponent<TextMeshProUGUI>();
+        
+        
     }
 
     // Update is called once per frame

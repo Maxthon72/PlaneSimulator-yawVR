@@ -29,6 +29,7 @@ public class DestroyAirplane : MonoBehaviour
     AudioSource hittedSound;
 
     public bool displayEndScreen = false;
+    public HealthBar healthBar;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -48,6 +49,10 @@ public class DestroyAirplane : MonoBehaviour
             }
 
             hp -= other.GetComponent<SetBullet>().bulletDamage;
+            if (this.gameObject.tag == "Player" && hp != null)
+            {
+                healthBar.SetHealth(hp);
+            }
             if (hp <= 0)
             {
                 if (this.gameObject.tag == "Player")
@@ -123,6 +128,11 @@ public class DestroyAirplane : MonoBehaviour
         objPrefab2 = Resources.Load("Explosions/Functional Explosion2") as GameObject;
         massacrated = -hp / 2;
         maxhp = hp;
+        if (this.gameObject.tag == "Player" && maxhp != null)
+        {
+            healthBar.SetMaxHealth(maxhp);
+        }
+
         if (this.gameObject.tag == "Player")
             hittedSound = this.transform.GetChild(8).GetComponent<AudioSource>();
         else hittedSound = this.transform.GetChild(7).GetComponent<AudioSource>();

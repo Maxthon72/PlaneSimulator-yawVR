@@ -6,7 +6,7 @@ public static class Noise
 
     public enum NormalizeMode { Local, Global };
 
-    public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, NoiseSettings settings, Vector2 sampleCentre)
+    public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, NoiseMapSettings settings, Vector2 sampleCentre)
     {
         float[,] noiseMap = new float[mapWidth, mapHeight];
 
@@ -90,7 +90,7 @@ public static class Noise
 }
 
 [System.Serializable]
-public class NoiseSettings
+public class NoiseMapSettings
 {
     public Noise.NormalizeMode normalizeMode;
 

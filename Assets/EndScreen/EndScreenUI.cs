@@ -13,6 +13,7 @@ public class EndScreenUI : MonoBehaviour
     {
         //endScreenManager = FindObjectOfType<EndScreenManager>();
     }*/
+
     public void Setup()
     {
         gameObject.SetActive(true);

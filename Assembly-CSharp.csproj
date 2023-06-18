@@ -149,6 +149,7 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\NoiseEx.cs" />
     <Compile Include="Assets\Menu\Menu.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Voronoi\VoronoiDiagramBase2D.cs" />
+    <Compile Include="Assets\Clouds\EndlessClouds.cs" />
     <Compile Include="Assets\YawVR\Scripts\YawController.cs" />
     <Compile Include="Assets\Terra\Source\Util\LRUCacheDictionary.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\EndNode.cs" />

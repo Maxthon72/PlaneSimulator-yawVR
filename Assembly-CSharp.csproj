@@ -155,6 +155,7 @@
     <Compile Include="Assets\Terra\Library\CoherentNoise\Texturing\TextureMaker.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Value\FloatNode.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\MeshDraftPrimitives.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\EndlessWater.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Interpolation\CubicSCurve.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Displacement\Perturb.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Generator\PinkNoiseNode.cs" />

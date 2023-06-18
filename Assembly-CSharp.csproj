@@ -334,10 +334,12 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Shaders\Standard Vertex Color.shader" />
+    <None Include="Assets\Stylized Water\Shaders\WaterUtilities.cginc" />
     <None Include="Assets\Terra\Source\Resources\GrassGeometryShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Terra\Source\Resources\TerrainFirstPass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Stylized Water\Textures\README.txt" />
     <None Include="Assets\TerrainGen\Scripts\Terrain.shader" />
     <None Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Shaders\Specular Vertex Color.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -348,12 +350,14 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Shaders\Debug\Debug UV1.shader" />
     <None Include="Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Stylized Water\Shaders\ShadowUtilities.cginc" />
     <None Include="Assets\Environment\Water (Basic)\DO_NOT_WORK_IN_VR.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Shaders\Debug\Debug Tangents.shader" />
+    <None Include="Assets\Stylized Water\Shaders\Stylized Water.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />

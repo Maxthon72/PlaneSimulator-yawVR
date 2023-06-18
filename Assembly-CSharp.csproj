@@ -268,6 +268,7 @@
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneLandingGear.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\InputModules\AirplaneInputAxes.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Generator\Voroni\AbsVoronoiNoiseNode.cs" />
+    <Compile Include="Assets\Old Hangar\Demo\Script\ThirdPersonCamera.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\CellularAutomaton\CellularAutomaton.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Beta\ExternalForceController.cs" />
     <Compile Include="Assets\YawVR\Scripts\Rotate.cs" />

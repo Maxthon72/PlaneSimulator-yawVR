@@ -147,6 +147,7 @@
     <Compile Include="Assets\Resources\Airplanes\AddGunsScript.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\GizmosE.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\NoiseEx.cs" />
+    <Compile Include="Assets\Compass\Compass.cs" />
     <Compile Include="Assets\Menu\Menu.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Voronoi\VoronoiDiagramBase2D.cs" />
     <Compile Include="Assets\Clouds\EndlessClouds.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Assets\YawVR\Scenes\Flying\Simple\GenerateMeshSimple.cs" />
     <Compile Include="Assets\TerrainGen\Scripts\Data\HeightMapSettings.cs" />
     <Compile Include="Assets\Terra\Source\TilePool.cs" />
+    <Compile Include="Assets\EndScreen\HealthBar.cs" />
     <Compile Include="Assets\Terra\Source\Detail\Object\ObjectPlacerPreview.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneCameraController.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\FacadeLayout.cs" />
@@ -314,8 +316,9 @@
     <Compile Include="Assets\YawVR\Sample\LED\Blinking.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\Common\CameraRotator.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Patterns\Spheres.cs" />
-    <Compile Include="Assets\TerrainGen\Scripts\MeshGenerator.cs" />
+    <Compile Include="Assets\EndScreen\ScoreManager.cs" />
     <Compile Include="Assets\YawVR\Scripts\ApplyRotationCenter.cs" />
+    <Compile Include="Assets\TerrainGen\Scripts\MeshGenerator.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\PTUtils.cs" />
     <Compile Include="Assets\Resources\Options.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\WaterBase.cs" />

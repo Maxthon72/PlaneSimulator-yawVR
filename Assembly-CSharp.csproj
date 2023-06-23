@@ -252,6 +252,7 @@
     <Compile Include="Assets\YawVR\Sample\LED\SimpleColor.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Modification\Bias.cs" />
     <Compile Include="Assets\TerrainGen\Scripts\Data\TextureData.cs" />
+    <Compile Include="Assets\Minimap\Minimap.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneLightManager.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneAerodynamics.cs" />
     <Compile Include="Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />

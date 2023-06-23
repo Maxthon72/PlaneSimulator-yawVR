@@ -76,7 +76,7 @@ public class EndlessWater : MonoBehaviour
             bounds = new Bounds(position, Vector2.one * size);
             Vector3 positionV3 = new Vector3(position.x, 35f, position.y);
             meshObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
-
+            meshObject.layer = 4;
             meshObject.GetComponent<MeshRenderer>().material = material;
             meshObject.transform.position = positionV3;
             meshObject.transform.localScale = Vector3.one * size / 10f;

@@ -6,7 +6,7 @@ public class AssetPlacement : MonoBehaviour
 {
     public static void SpawnAssetsOnChunkVerts(Vector3 pos, Vector2 centre, float assetOffSet, Vector2 offsetMultiplier, GameObject[] treePrefabs, Transform treeParent)
     {
-        if (pos.y >= 90f && pos.y <= 210f && Random.Range(0, 1200) == 1) 
+        if (pos.y >= 90f && pos.y <= 210f && Random.Range(0, 1500) == 1) 
         {
             if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {
@@ -17,7 +17,7 @@ public class AssetPlacement : MonoBehaviour
                 treeXY.transform.parent = treeParent.transform;
             }
         }
-        else if (pos.y >= 45f && pos.y <= 95f && Random.Range(0, 2000) == 1)
+        else if (pos.y >= 50f && pos.y <= 100f && Random.Range(0, 2000) == 1)
         {
             if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {
@@ -28,7 +28,7 @@ public class AssetPlacement : MonoBehaviour
                 treeXY.transform.parent = treeParent.transform;
             }
         }
-        else if (pos.y >= 32f && pos.y <= 42f && Random.Range(0, 2500) == 1)
+        else if (pos.y >= 34f && pos.y <= 42f && Random.Range(0, 2500) == 1)
         {
             if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {

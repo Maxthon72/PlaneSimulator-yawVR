@@ -13,6 +13,8 @@ public class MeshSettings : UpdatableData
     public float meshScale = 6f;
     public bool useFlatShading;
 
+    public GameObject tree;
+
     [Range(0, numSupportedChunkSizes - 1)]
     public int chunkSizeIndex;
     [Range(0, numSupportedFlatshadedChunkSizes - 1)]

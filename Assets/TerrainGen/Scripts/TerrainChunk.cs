@@ -124,6 +124,12 @@ public class TerrainChunk
                     {
                         previousLODIndex = lodIndex;
                         meshFilter.mesh = lodMesh.mesh;
+
+                        foreach(Vector3 vertex in meshFilter.mesh.vertices)
+                        {
+                            AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.tree, meshFilter.transform);
+                        }
+
                     }
                     else if (!lodMesh.hasRequestedMesh)
                     {

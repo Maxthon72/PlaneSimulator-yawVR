@@ -15,5 +15,6 @@ MonoBehaviour:
   autoUpdate: 1
   meshScale: 10
   useFlatShading: 1
+  tree: {fileID: 149218, guid: fc05c8bfad7df5a4abe568aca7403b9e, type: 3}
   chunkSizeIndex: 8
   flatshadedChunkSizeIndex: 2

@@ -127,7 +127,7 @@ public class TerrainChunk
 
                         foreach(Vector3 vertex in meshFilter.mesh.vertices)
                         {
-                            AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.tree, meshFilter.transform);
+                            AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.trees, meshFilter.transform);
                         }
 
                     }

@@ -4,33 +4,38 @@ using UnityEngine;
 
 public class AssetPlacement : MonoBehaviour
 {
-    public static void SpawnAssetsOnChunkVerts(Vector3 pos, Vector2 centre, float assetOffSet, Vector2 offsetMultiplier, GameObject treePrefab, Transform treeParent)
+    public static void SpawnAssetsOnChunkVerts(Vector3 pos, Vector2 centre, float assetOffSet, Vector2 offsetMultiplier, GameObject[] treePrefabs, Transform treeParent)
     {
-        if(pos.y>=55f && pos.y<=55.2f)
+        if (pos.y >= 90f && pos.y <= 210f && Random.Range(0, 1200) == 1) 
         {
-            if(offsetMultiplier.x==0&& offsetMultiplier.y!=0)
+            if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {
-                GameObject tree0Y = Object.Instantiate(treePrefab, new Vector3(pos.x, pos.y, pos.z + assetOffSet * offsetMultiplier.y), Quaternion.identity);
-                tree0Y.name = "Tree_at_X=0";
-                tree0Y.transform.parent = treeParent.transform;
+                GameObject treeXY = Object.Instantiate(treePrefabs[0], new Vector3(pos.x + assetOffSet * offsetMultiplier.x, pos.y, pos.z + assetOffSet * offsetMultiplier.y), Quaternion.identity);
+                treeXY.name = "Tree0";
+                treeXY.transform.localScale = Vector3.one * Random.Range(10, 25);
+                treeXY.transform.Rotate(0, Random.Range(-90, 90), 0);
+                treeXY.transform.parent = treeParent.transform;
             }
-            else if (offsetMultiplier.x != 0 && offsetMultiplier.y == 0)
+        }
+        else if (pos.y >= 45f && pos.y <= 95f && Random.Range(0, 2000) == 1)
+        {
+            if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {
-                GameObject treeX0 = Object.Instantiate(treePrefab, new Vector3(pos.x + assetOffSet * offsetMultiplier.x, pos.y, pos.z), Quaternion.identity);
-                treeX0.name = "Tree_at_Y=0";
-                treeX0.transform.parent = treeParent.transform;
+                GameObject treeXY = Object.Instantiate(treePrefabs[1], new Vector3(pos.x + assetOffSet * offsetMultiplier.x, pos.y, pos.z + assetOffSet * offsetMultiplier.y), Quaternion.identity);
+                treeXY.name = "Tree1";
+                treeXY.transform.localScale = Vector3.one * Random.Range(10, 20);
+                treeXY.transform.Rotate(0, Random.Range(-90, 90), 0);
+                treeXY.transform.parent = treeParent.transform;
             }
-            else if (offsetMultiplier.x == 0 && offsetMultiplier.y == 0)
+        }
+        else if (pos.y >= 32f && pos.y <= 42f && Random.Range(0, 2500) == 1)
+        {
+            if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
             {
-                GameObject tree00 = Object.Instantiate(treePrefab, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
-                tree00.name = "Tree_at_XY=0";
-                tree00.transform.parent = treeParent.transform;
-            }
-            else if (offsetMultiplier.x != 0 && offsetMultiplier.y != 0)
-            {
-                GameObject treeXY = Object.Instantiate(treePrefab, new Vector3(pos.x + assetOffSet * offsetMultiplier.x, pos.y, pos.z + assetOffSet * offsetMultiplier.y), Quaternion.identity);
-                treeXY.name = "Tree_value";
-                treeXY.transform.localScale = new Vector3(20, 20, 20);
+                GameObject treeXY = Object.Instantiate(treePrefabs[2], new Vector3(pos.x + assetOffSet * offsetMultiplier.x, pos.y, pos.z + assetOffSet * offsetMultiplier.y), Quaternion.identity);
+                treeXY.name = "Tree2";
+                treeXY.transform.localScale = Vector3.one * Random.Range(10, 20);
+                treeXY.transform.Rotate(0, Random.Range(-90, 90), 0);
                 treeXY.transform.parent = treeParent.transform;
             }
         }

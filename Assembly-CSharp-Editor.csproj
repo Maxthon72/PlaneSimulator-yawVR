@@ -58,6 +58,7 @@
     <Analyzer Include="E:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\ElementAdderMenuBuilder.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\GenericElementAdderMenu.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\ElementAdderMenuCommandAttribute.cs" />
@@ -67,8 +68,11 @@
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\BuildingGenerator\Editor\BuildingGeneratorConfiguratorEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\IReorderableListDropTarget.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\TerrainSettingsEditor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\DepthOfFieldEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\IElementAdderMenuBuilder.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\EdgeDetectionEditor.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\ReorderableMaterialList.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\NoiseAndGrainEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Editor\GeneratorNodeEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\GenericElementAdderMenuBuilder.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorGUILayout.cs" />
@@ -77,17 +81,23 @@
     <Compile Include="Assets\Terra\Source\Editor\NoiseTreeView.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInputSimpleAI_Editor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInputDelegate_Editor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\CameraMotionBlurEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\ElementAdderMeta.cs" />
     <Compile Include="Assets\TerrainGen\Editor\UpdatableDataEditor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInput_Editor.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\AddTextureWindow.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Noise\Editor\ScaleNodeEditor.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Editor\MeshFilterExtension.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorReflection.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\Beta\ExternalForceController_Editor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\BloomEditor.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneAerodynamics_Editor.cs" />
     <Compile Include="Assets\Terra\Source\Editor\ThreadedGenTest.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\SerializedPropertyAdaptor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\ReorderableListGUI.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInputAxes_Editor.cs" />
@@ -97,9 +107,11 @@
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\ReorderableListEvents.cs" />
     <Compile Include="Assets\Terra\Library\xNode\TerraGraph\Editor\EndNodeEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Internal\GUIHelper.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Editor\ProceduralToolkitMenu.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Internal\SerializedPropertyUtility.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\Editor\AirplaneInformation_Editor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorPreferences.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\EditorGUIExtension.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\IElementAdder.cs" />
@@ -110,6 +122,7 @@
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\IReorderableListAdaptor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Internal\ReorderableListResources.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\ChairGenerator\Editor\ChairGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\CreaseShadingEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeGraphEditor.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorUtilities.cs" />
     <Compile Include="Assets\Terra\Source\Editor\Settings GUI\TerraGUI.cs" />
@@ -118,6 +131,7 @@
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\ReorderableListStyles.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Editor\NodeEditorGUI.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Examples\LowPolyTerrainGenerator\Editor\LowPolyTerrainGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\#NVJOB Boids\Example Scenes\Standard Assets\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
     <Compile Include="Assets\Terra\Library\ReorderableListEditorField\Editor\Element Adder Menu\IElementAdderMenuCommand.cs" />
   </ItemGroup>
   <ItemGroup>

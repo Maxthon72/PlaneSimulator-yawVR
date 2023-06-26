@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TerrainChunk
 {
@@ -130,6 +131,8 @@ public class TerrainChunk
                             if (!(this.coord.x == 0 && this.coord.y == 0)) 
                                 AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.trees, meshFilter.transform);
                         }
+
+                        AssetPlacement.SpawnBoidChunkVerts(meshFilter.mesh.vertices[Random.Range(0, meshFilter.mesh.vertices.Length - 1)], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
 
                     }
                     else if (!lodMesh.hasRequestedMesh)

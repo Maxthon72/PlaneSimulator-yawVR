@@ -7,7 +7,7 @@ public class DestroyBalloon : MonoBehaviour
 
     public float fallspeed = 1;
     public float DestroyLifeTime = 10;
-    bool destroyed = false;
+    public bool destroyed = false;
 
     private void OnTriggerEnter(Collider other)
     {

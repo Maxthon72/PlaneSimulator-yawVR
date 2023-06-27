@@ -67,6 +67,7 @@
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\VectorE.cs" />
     <Compile Include="Assets\Terra\Library\xNode\Scripts\Node.cs" />
     <Compile Include="Assets\Resources\Airplanes\SetPlane.cs" />
+    <Compile Include="Assets\Minimap\SetPosition.cs" />
     <Compile Include="Assets\SimpleAirplaneController\Scripts\AirplaneInformation.cs" />
     <Compile Include="Assets\Terra\Library\CoherentNoise\Generation\Modification\Gain.cs" />
     <Compile Include="Assets\YawVR\ThirdParty\ProceduralToolkit\Draw.cs" />

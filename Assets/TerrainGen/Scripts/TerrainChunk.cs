@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityStandardAssets.ImageEffects;
 
 public class TerrainChunk
 {
@@ -126,14 +127,30 @@ public class TerrainChunk
                         previousLODIndex = lodIndex;
                         meshFilter.mesh = lodMesh.mesh;
 
-                        foreach(Vector3 vertex in meshFilter.mesh.vertices)
+                        if (!meshSettings.isMenu)
                         {
-                            if (!(this.coord.x == 0 && this.coord.y == 0)) 
-                                AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.trees, meshFilter.transform);
+                            if (!(this.coord.x == 0 && this.coord.y == 0))
+                            {
+                                foreach (Vector3 vertex in meshFilter.mesh.vertices)
+                                {
+                                    AssetPlacement.SpawnAssetsOnChunkVerts(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.trees, meshFilter.transform);
+                                }
+                            }
+
+                            AssetPlacement.SpawnBoidChunkVerts(meshFilter.mesh.vertices[Random.Range(0, meshFilter.mesh.vertices.Length - 1)], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
                         }
-
-                        AssetPlacement.SpawnBoidChunkVerts(meshFilter.mesh.vertices[Random.Range(0, meshFilter.mesh.vertices.Length - 1)], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
-
+                        else
+                        {
+                            if (this.coord.x == 0 && this.coord.y == 0) 
+                                AssetPlacement.SpawnBirdsInMenu(meshFilter.mesh.vertices[(meshFilter.mesh.vertices.Length - 1) /5], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
+                            else
+                            {
+                                foreach (Vector3 vertex in meshFilter.mesh.vertices)
+                                {
+                                    AssetPlacement.SpawnTreesInMenu(vertex, sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.trees, meshFilter.transform);
+                                }
+                            }
+                        }
                     }
                     else if (!lodMesh.hasRequestedMesh)
                     {

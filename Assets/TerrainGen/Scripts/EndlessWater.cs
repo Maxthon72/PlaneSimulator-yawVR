@@ -40,25 +40,52 @@ public class EndlessWater : MonoBehaviour
         int currentChunkCoordX = Mathf.RoundToInt(viewerPosition.x / meshSettings.meshWorldSize);
         int currentChunkCoordY = Mathf.RoundToInt(viewerPosition.y / meshSettings.meshWorldSize);
 
-        for (int yOffset = -chunksVisibleInViewDst; yOffset <= chunksVisibleInViewDst; yOffset++)
+        if (!meshSettings.isMenu)
         {
-            for (int xOffset = -chunksVisibleInViewDst; xOffset <= chunksVisibleInViewDst; xOffset++)
+            for (int yOffset = -chunksVisibleInViewDst; yOffset <= chunksVisibleInViewDst; yOffset++)
             {
-                Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
-
-                if (waterChunkDictionary.ContainsKey(viewedChunkCoord))
+                for (int xOffset = -chunksVisibleInViewDst; xOffset <= chunksVisibleInViewDst; xOffset++)
                 {
-                    waterChunkDictionary[viewedChunkCoord].UpdateTerrainChunk();
-                    if (waterChunkDictionary[viewedChunkCoord].IsVisible())
+                    Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
+
+                    if (waterChunkDictionary.ContainsKey(viewedChunkCoord))
                     {
-                        waterChunksVisibleLastUpdate.Add(waterChunkDictionary[viewedChunkCoord]);
+                        waterChunkDictionary[viewedChunkCoord].UpdateTerrainChunk();
+                        if (waterChunkDictionary[viewedChunkCoord].IsVisible())
+                        {
+                            waterChunksVisibleLastUpdate.Add(waterChunkDictionary[viewedChunkCoord]);
+                        }
                     }
-                }
-                else
-                {
-                    waterChunkDictionary.Add(viewedChunkCoord, new WaterChunk(viewedChunkCoord, (int)meshSettings.meshWorldSize, transform, waterMaterial));
-                }
+                    else
+                    {
+                        waterChunkDictionary.Add(viewedChunkCoord, new WaterChunk(viewedChunkCoord, (int)meshSettings.meshWorldSize, transform, waterMaterial));
+                    }
 
+                }
+            }
+        }
+        else
+        {
+            for (int yOffset = 0; yOffset <= chunksVisibleInViewDst; yOffset++)
+            {
+                for (int xOffset = -chunksVisibleInViewDst; xOffset <= chunksVisibleInViewDst; xOffset++)
+                {
+                    Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
+
+                    if (waterChunkDictionary.ContainsKey(viewedChunkCoord))
+                    {
+                        waterChunkDictionary[viewedChunkCoord].UpdateTerrainChunk();
+                        if (waterChunkDictionary[viewedChunkCoord].IsVisible())
+                        {
+                            waterChunksVisibleLastUpdate.Add(waterChunkDictionary[viewedChunkCoord]);
+                        }
+                    }
+                    else
+                    {
+                        waterChunkDictionary.Add(viewedChunkCoord, new WaterChunk(viewedChunkCoord, (int)meshSettings.meshWorldSize, transform, waterMaterial));
+                    }
+
+                }
             }
         }
     }

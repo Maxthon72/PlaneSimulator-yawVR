@@ -142,7 +142,7 @@ public class TerrainChunk
                         else
                         {
                             if (this.coord.x == 0 && this.coord.y == 0) 
-                                AssetPlacement.SpawnBirdsInMenu(meshFilter.mesh.vertices[(meshFilter.mesh.vertices.Length - 1) /5], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
+                                AssetPlacement.SpawnBirdsInMenu(meshFilter.mesh.vertices[(meshFilter.mesh.vertices.Length - 1) /2], sampleCentre, meshSettings.meshWorldSize, coord, meshSettings.birds, meshFilter.transform);
                             else
                             {
                                 foreach (Vector3 vertex in meshFilter.mesh.vertices)

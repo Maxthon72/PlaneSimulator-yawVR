@@ -8,21 +8,25 @@ public class DestroyBalloon : MonoBehaviour
     public float fallspeed = 1;
     public float DestroyLifeTime = 10;
     public bool destroyed = false;
+    static public int balloonNum = 0;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Bullet")
         {
             this.GetComponent<Animator>().Play("Destruction");
+            if (!destroyed)
+                balloonNum--;
             destroyed = true;
             Destroy(this.GetComponent<Collider>());
-            ScoreManager.instance.AddPoint();
+            ScoreManager.instance.updateBalloonNum();
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        balloonNum++;
+        ScoreManager.instance.updateBalloonNum();
     }
 
     // Update is called once per frame

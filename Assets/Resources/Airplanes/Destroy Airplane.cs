@@ -87,7 +87,7 @@ public class DestroyAirplane : MonoBehaviour
                 }
             }
                 
-            print(hp);
+            //print(hp);
             //this.GetComponent<Animator>().Play("Destruction");
             if(notMassacre)
             {
@@ -98,7 +98,7 @@ public class DestroyAirplane : MonoBehaviour
              //   trail.shape.radius = 
                 var newShape = trail.shape;
                 newShape.radius = trailRad * x;
-                print(x);
+                //print(x);
                 /*this.GetComponent<TrailRenderer>().enabled = true;
                 this.GetComponent<TrailRenderer>().widthMultiplier = x;
                 this.GetComponent<TrailRenderer>().time = 5 + x/4;*/

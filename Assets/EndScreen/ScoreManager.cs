@@ -11,7 +11,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     public TMP_Text scoreText;
-    int score = 0;
+    public TMP_Text planesNum;
+    int score = -1;
 
     public EndScreenUI endScreenUI;
 
@@ -23,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText.text = "SCORE: " + score.ToString();
+        planesNum.text = "Zosta³o balonów: ";
     }
 
     public void AddPoint()
@@ -30,9 +32,18 @@ public class ScoreManager : MonoBehaviour
         score += 1;
         scoreText.text = "SCORE: " + score.ToString();
         
-        if (score == 5)//do zmiany
+        if (score == 9999)//do zmiany
         {
             endScreenUI.Setup();
         }
+    }
+    public int getScore()
+    {
+        return score;
+    }
+
+    public void updateBalloonNum()
+    {
+        planesNum.text = "Zosta³o balonów: " + DestroyBalloon.balloonNum.ToString();
     }
 }
